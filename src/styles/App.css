@@ -1,0 +1,9 @@
+.App {
+  text-align: center;
+  background: radial-gradient(circle at top, #1f3756, #141539);
+  height: 100vh;
+}
+
+.App > * {
+  box-sizing: border-box;
+}/*# sourceMappingURL=App.css.map */
