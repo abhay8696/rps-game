@@ -1,17 +1,15 @@
 import React from 'react';
 //styles
 import '../styles/header.css';
+import logo from '../assets/images/logo.svg';
+import logoBonus from '../assets/images/logo-bonus.svg';
 
 const Header = () => {
     return (
         <div className='header'>
-            <div className='title'>
-                <span>ROCK</span>
-                <span>PAPER</span>
-                <span>SCISSOR</span>
-            </div>
+            <img src={logo} className='logo'/>
             <div className='scoreCard'>
-                <span className='scoreTitle'>SCORE</span>
+                <span className='scoreText'>SCORE</span>
                 <span className='score'>12</span>
             </div>
         </div>

@@ -1,7 +1,12 @@
+@import 'flexbox';
+@import 'breakpoints';
+
 .App {
     text-align: center;
     background: radial-gradient(circle at top, #1f3756 , #141539);
     height: 100vh;
+    @include flexbox(column, center, space-between);
+    font-family: 'Barlow Semi Condensed', sans-serif;
 }
 .App > *{
     box-sizing: border-box;

@@ -1,5 +1,67 @@
 .header {
-  width: 50vw;
-  border: 3px solid grey;
-  border-radius: 4px;
+  padding: 1rem;
+  margin-top: 3rem;
+  border: 3.8px solid hsl(217deg, 16%, 45%);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: "";
+  align-items: "";
+  justify-content: space-between;
+}
+.header .scoreCard {
+  background-image: linear-gradient(to bottom, #ffffff, #f7f6f7, #f0edef, #e9e4e5, #e2dbdb);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+.header .scoreCard .scoreText {
+  color: hsl(229deg, 64%, 46%);
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.header .scoreCard .score {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: hsl(229deg, 25%, 31%);
+}
+
+@media only screen and (min-width: 960px) {
+  .header {
+    width: 50vw;
+    padding: 1.5rem;
+  }
+  .header .scoreCard {
+    width: 150px;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .header {
+    width: 80vw;
+  }
+  .header .scoreCard {
+    width: 120px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .header {
+    margin-top: 2rem;
+    width: 90vw;
+    border-radius: 10px;
+  }
+  .header .scoreCard {
+    width: 100px;
+    border-radius: 8px;
+  }
+  .header .scoreCard .scoreText {
+    font-size: 0.9rem;
+  }
+  .header .scoreCard .score {
+    font-size: 2.5rem;
+  }
+  .header img {
+    max-width: 35%;
+  }
 }/*# sourceMappingURL=header.css.map */
