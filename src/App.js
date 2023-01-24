@@ -11,7 +11,7 @@ function App() {
       <Header/>
       <PlayComp/>
       <div className='dummy'></div>
-      {/* <h1>RULES</h1> */}
+      <div className='rulesButton'>RULES</div>
     </div>
   );
 }

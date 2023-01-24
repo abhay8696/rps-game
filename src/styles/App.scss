@@ -7,6 +7,15 @@
     height: 100vh;
     @include flexbox(column, center, space-between);
     font-family: 'Barlow Semi Condensed', sans-serif;
+    .rulesButton{
+        position: fixed;
+        border: 1px solid #e9e4e5;
+        border-radius: 0.5rem;
+        color: #e9e4e5;
+        padding: 8px 32px;
+        bottom: 2rem;
+        right: 2rem;
+    }
 }
 .App > *{
     box-sizing: border-box;
@@ -15,6 +24,12 @@
 @include sm-below-screen{
     .dummy{
         height: 20vh;
+    }
+    .rulesButton{
+        left: 50%;
+        width: 30vw;
+        margin-left: -15vw;
+        text-align: center;
     }
 }
 
