@@ -10,6 +10,7 @@ function App() {
     <div className="App">
       <Header/>
       <PlayComp/>
+      <div className='dummy'></div>
       {/* <h1>RULES</h1> */}
     </div>
   );

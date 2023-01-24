@@ -5,7 +5,6 @@
 }
 
 .playComp {
-  border: 1px solid white;
   flex: 1;
   padding: 2rem;
   display: flex;
@@ -17,7 +16,8 @@
 .playComp .circle {
   width: 30%;
   aspect-ratio: 1;
-  margin: 0 1.5rem 1.5rem 1.5rem;
+  padding: 4%;
+  margin: 0 5% 5% 5%;
   border-radius: 50%;
   box-sizing: border-box;
 }
@@ -48,27 +48,48 @@
   box-shadow: 0px 8px 2px 0px #b62741;
 }
 
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 1200px) {
   .playComp {
     width: 50vw;
   }
   .playComp .circle {
-    padding: 1.5rem;
+    width: 200px;
   }
 }
-@media only screen and (max-width: 960px) {
+@media only screen and (min-width: 960px) and (max-width: 1200px) {
+  .playComp {
+    width: 60vw;
+  }
+  .playComp .circle {
+    width: 180px;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 960px) {
   .playComp {
     width: 80vw;
   }
   .playComp .circle {
+    width: 180px;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 720px) {
+  .playComp {
+    width: 80vw;
     padding: 1rem;
+  }
+  .playComp .circle {
+    width: 150px;
+    margin: 0 3% 3% 3%;
   }
 }
 @media only screen and (max-width: 480px) {
   .playComp {
     width: 90vw;
+    max-height: 50vh;
+    padding: 0rem;
   }
   .playComp .circle {
-    padding: 0.5rem;
+    width: 140px;
+    padding: 3%;
   }
 }/*# sourceMappingURL=playComp.css.map */

@@ -7,7 +7,6 @@
     background-repeat: no-repeat;
 }
 .playComp{
-    border: 1px solid white;
     flex: 1;
     padding: 2rem;
     @include flexbox('', center, center);
@@ -15,7 +14,8 @@
     .circle{
         width: 30%;
         aspect-ratio: 1;
-        margin: 0 1.5rem 1.5rem 1.5rem;
+        padding: 4%;  
+        margin: 0 5% 5% 5%; 
         border-radius: 50%;
         box-sizing: border-box;
         .imgDiv{
@@ -52,27 +52,49 @@
     }
 }
 
-@include lg-above-screen{
+@include xl-above-screen{
     .playComp{
         width: 50vw;
         .circle{
-            padding: 1.5rem;
+            width: 200px;
         }
     }
 }
-@include lg-below-screen{
+@include lg-xl-screen{
+    .playComp{
+        width: 60vw;
+        .circle{
+            width: 180px;
+        }
+    }
+}
+@include md-lg-screen{
     .playComp{
         width: 80vw;
         .circle{
-            padding: 1rem;
+            width: 180px;
+        }
+    }
+}
+@include sm-md-screen{
+    .playComp{
+        width: 80vw;
+        padding: 1rem;
+        .circle{
+            width: 150px;
+            margin: 0 3% 3% 3%; 
         }
     }
 }
 @include sm-below-screen{
     .playComp{
         width: 90vw;
+        max-height: 50vh;
+        padding: 0rem;
         .circle{
-            padding: 0.5rem;
+            width: 140px;
+            // margin: 0 4% 4% 4%; 
+            padding: 3%;  
         }
     }
 }

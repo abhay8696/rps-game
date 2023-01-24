@@ -28,13 +28,21 @@
   color: hsl(229deg, 25%, 31%);
 }
 
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 1200px) {
   .header {
     width: 50vw;
     padding: 1.5rem;
   }
   .header .scoreCard {
     width: 150px;
+  }
+}
+@media only screen and (min-width: 960px) and (max-width: 1200px) {
+  .header {
+    width: 60vw;
+  }
+  .header .scoreCard {
+    width: 120px;
   }
 }
 @media only screen and (max-width: 960px) {

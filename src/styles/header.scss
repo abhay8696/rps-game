@@ -27,12 +27,20 @@
     }
 }
 
-@include lg-above-screen{
+@include xl-above-screen{
     .header{
         width: 50vw;
         padding: 1.5rem;
         .scoreCard{
             width: 150px;
+        }
+    }
+}
+@include lg-xl-screen{
+    .header{
+        width: 60vw;
+        .scoreCard{
+            width: 120px;
         }
     }
 }
