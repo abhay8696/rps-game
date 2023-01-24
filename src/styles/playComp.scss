@@ -1,0 +1,78 @@
+@import 'flexbox';
+@import 'breakpoints';
+
+.bg-triangle{
+    background-image: url('../assets/images/bg-triangle.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.playComp{
+    border: 1px solid white;
+    flex: 1;
+    padding: 2rem;
+    @include flexbox('', center, center);
+    flex-wrap: wrap;
+    .circle{
+        width: 30%;
+        aspect-ratio: 1;
+        margin: 0 1.5rem 1.5rem 1.5rem;
+        border-radius: 50%;
+        box-sizing: border-box;
+        .imgDiv{
+            background-image: linear-gradient(to bottom, #ffffff, #f7f6f7, #f0edef, #e9e4e5, #e2dbdb);
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            @include flexbox('', center, center);
+            -webkit-box-shadow: inset 0px 8px 2px 0px rgba(139, 138, 138, 0.507);
+            -moz-box-shadow: inset 0px 8px 2px 0px  rgba(139, 138, 138, 0.507);
+            box-shadow: inset 0px 8px 2px 0px  rgba(139, 138, 138, 0.507);
+            img{
+                width: 50%;
+            }
+        }
+    }
+    .paper{
+        background: radial-gradient(circle at top, #4865f4, #5671f5);
+        -webkit-box-shadow: 0px 8px 2px 0px  #2947df;
+        -moz-box-shadow: 0px 8px 2px 0px  #2947df;
+        box-shadow: 0px 8px 2px 0px  #2947df;
+    }
+    .scissors{
+        background: radial-gradient(circle at top, #ec9e0e, #eca922);
+        -webkit-box-shadow: 0px 8px 2px 0px  #c58d25;
+        -moz-box-shadow: 0px 8px 2px 0px  #c58d25;
+        box-shadow: 0px 8px 2px 0px  #c58d25;
+    }
+    .rock{
+        background: radial-gradient(circle at top, #dc2e4e, #dd405d);
+        -webkit-box-shadow: 0px 8px 2px 0px  #b62741;
+        -moz-box-shadow: 0px 8px 2px 0px  #b62741;
+        box-shadow: 0px 8px 2px 0px  #b62741;
+    }
+}
+
+@include lg-above-screen{
+    .playComp{
+        width: 50vw;
+        .circle{
+            padding: 1.5rem;
+        }
+    }
+}
+@include lg-below-screen{
+    .playComp{
+        width: 80vw;
+        .circle{
+            padding: 1rem;
+        }
+    }
+}
+@include sm-below-screen{
+    .playComp{
+        width: 90vw;
+        .circle{
+            padding: 0.5rem;
+        }
+    }
+}
