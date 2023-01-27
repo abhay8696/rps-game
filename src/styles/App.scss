@@ -2,6 +2,7 @@
 @import 'breakpoints';
 
 .App {
+    position: relative;
     text-align: center;
     background: radial-gradient(circle at top, #1f3756 , #141539);
     height: 100vh;
@@ -15,6 +16,9 @@
         padding: 8px 32px;
         bottom: 2rem;
         right: 2rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        cursor: pointer;
     }
 }
 .App > *{

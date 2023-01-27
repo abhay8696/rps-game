@@ -1,0 +1,37 @@
+@import 'flexbox';
+@import 'breakpoints';
+
+.rulesModal{
+    background-color: rgba(0, 0, 0, 0.466);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    @include flexbox('', center, center);
+    .modalDiv{
+        padding: 1rem 3rem;
+        margin: auto 0.5rem;
+        box-sizing: border-box;
+        background-color: #fff;
+        border-radius: 1rem;
+        img{
+            margin-top: 1rem;
+            @include sm-below-screen{
+                max-width: 70vw;
+            }
+        }
+        @include flexbox(column, center, space-between);
+        .modalHeader{
+            width: 100%;
+            @include flexbox('', center, space-between);
+            span{
+                font-size: 2rem;
+                font-weight: 700;
+                color: hsl(229, 25%, 31%);
+                margin: 1rem 0;
+            }
+            img{
+                cursor: pointer;
+            }
+        }
+    }
+}

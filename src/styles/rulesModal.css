@@ -1,0 +1,45 @@
+.rulesModal {
+  background-color: rgba(0, 0, 0, 0.466);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  flex-direction: "";
+  align-items: center;
+  justify-content: center;
+}
+.rulesModal .modalDiv {
+  padding: 1rem 3rem;
+  margin: auto 0.5rem;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.rulesModal .modalDiv img {
+  margin-top: 1rem;
+}
+@media only screen and (max-width: 480px) {
+  .rulesModal .modalDiv img {
+    max-width: 70vw;
+  }
+}
+.rulesModal .modalDiv .modalHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: "";
+  align-items: center;
+  justify-content: space-between;
+}
+.rulesModal .modalDiv .modalHeader span {
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(229deg, 25%, 31%);
+  margin: 1rem 0;
+}
+.rulesModal .modalDiv .modalHeader img {
+  cursor: pointer;
+}/*# sourceMappingURL=rulesModal.css.map */
