@@ -86,12 +86,12 @@
 }
 
 @include sm-above-screen{
-    .innerDiv2{
+    .innerDiv2, .result2{
         display: none;
     }
 }
 @include sm-below-screen{
-    .innerDiv1{
+    .innerDiv1, .result1{
         display: none;
     }
 }

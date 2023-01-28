@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 //styles
 import '../styles/playComp.css';
 import '../styles/playComp2.css';
@@ -10,8 +10,6 @@ import scissors from '../assets/images/icon-scissors.svg';
 
 const PlayComp2 = (props) => {
     const { pick1, pick2, handleReset } = props;
-    //states
-    const [resultMsg, setResultMsg] = useState();
     
     const 
     handButton = type=> {
@@ -63,11 +61,15 @@ const PlayComp2 = (props) => {
             </div>
             <div className='innerDiv'>
                 {handButton(pick1)}
-                <div className='result'>
+                <div className='result result1'>
                     <span className='resultMsg msg'>{getResult()}</span>
                     <span className='playAgain' onClick={()=> handleReset()}>PLAY AGAIN</span>
                 </div>
                 {handButton(pick2)}
+            </div>
+            <div className='result result2'>
+                <span className='resultMsg msg'>{getResult()}</span>
+                <span className='playAgain' onClick={()=> handleReset()}>PLAY AGAIN</span>
             </div>
             <div className='innerDiv2'>
                 <div className='msg'>YOU PICKED</div>

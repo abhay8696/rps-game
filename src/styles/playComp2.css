@@ -94,12 +94,12 @@
   }
 }
 @media only screen and (min-width: 480px) {
-  .innerDiv2 {
+  .innerDiv2, .result2 {
     display: none;
   }
 }
 @media only screen and (max-width: 480px) {
-  .innerDiv1 {
+  .innerDiv1, .result1 {
     display: none;
   }
 }/*# sourceMappingURL=playComp2.css.map */
