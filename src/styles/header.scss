@@ -2,12 +2,16 @@
 @import 'breakpoints';
 
 .header{
+    // animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: appearDown 1000ms ease-out 0s forwards;
     padding: 1rem;
     margin-top: 3rem;
     border: 3.8px solid hsl(217, 16%, 45%);
     border-radius: 15px;
     @include flexbox('', '', space-between);
-
+    .logo{
+        
+    }
     .scoreCard{
         background-image: linear-gradient(to bottom, #ffffff, #f7f6f7, #f0edef, #e9e4e5, #e2dbdb);
         
@@ -72,3 +76,20 @@
         }
     }
 }
+
+
+@keyframes appearDown {
+    0%{
+
+    }
+    1%{
+
+    }
+    2%{
+        transform: translateY(-150%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+

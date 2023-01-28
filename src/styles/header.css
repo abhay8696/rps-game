@@ -1,4 +1,6 @@
 .header {
+  -webkit-animation: appearDown 1000ms ease-out 0s forwards;
+          animation: appearDown 1000ms ease-out 0s forwards;
   padding: 1rem;
   margin-top: 3rem;
   border: 3.8px solid hsl(217deg, 16%, 45%);
@@ -71,5 +73,21 @@
   }
   .header img {
     max-width: 35%;
+  }
+}
+@-webkit-keyframes appearDown {
+  2% {
+    transform: translateY(-150%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes appearDown {
+  2% {
+    transform: translateY(-150%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }/*# sourceMappingURL=header.css.map */

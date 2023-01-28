@@ -2,6 +2,7 @@
 @import 'breakpoints';
 
 .bg-triangle{
+    animation: fadeIn 500ms ease-out 0s forwards;
     background-image: url('../assets/images/bg-triangle.svg');
     background-position: center;
     background-repeat: no-repeat;
@@ -13,6 +14,8 @@
     flex-wrap: wrap;
 }
 .circle{
+    // animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: scaleUp 3000ms ease-out 0s forwards;
     width: 30%;
     aspect-ratio: 1;
     padding: 4%;  
@@ -97,5 +100,35 @@
         width: 140px;
         // margin: 0 4% 4% 4%; 
         padding: 3%;  
+    }
+}
+
+@keyframes scaleUp {
+    0%{
+
+    }
+    1%{
+    }
+    2%{
+        transform: scale(0%);
+    }
+    90%{
+        transform: scale(0%);
+    }
+    100%{
+        transform: scale(100%);
+    }
+}
+@keyframes fadeIn {
+    0%{
+
+    }
+    1%{
+    }
+    2%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }

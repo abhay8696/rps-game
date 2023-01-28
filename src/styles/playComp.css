@@ -1,4 +1,6 @@
 .bg-triangle {
+  -webkit-animation: fadeIn 500ms ease-out 0s forwards;
+          animation: fadeIn 500ms ease-out 0s forwards;
   background-image: url("../assets/images/bg-triangle.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -15,6 +17,8 @@
 }
 
 .circle {
+  -webkit-animation: scaleUp 3000ms ease-out 0s forwards;
+          animation: scaleUp 3000ms ease-out 0s forwards;
   width: 30%;
   aspect-ratio: 1;
   padding: 4%;
@@ -96,5 +100,43 @@
   .circle {
     width: 140px;
     padding: 3%;
+  }
+}
+@-webkit-keyframes scaleUp {
+  2% {
+    transform: scale(0%);
+  }
+  90% {
+    transform: scale(0%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+@keyframes scaleUp {
+  2% {
+    transform: scale(0%);
+  }
+  90% {
+    transform: scale(0%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+@-webkit-keyframes fadeIn {
+  2% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  2% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }/*# sourceMappingURL=playComp.css.map */
