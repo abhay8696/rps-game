@@ -44,6 +44,27 @@
   justify-content: center;
 }
 
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+.result .resultMsg {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+.result .playAgain {
+  background-color: white;
+  color: hsl(229deg, 25%, 31%);
+  padding: 1rem 3rem;
+  border-radius: 0.5rem;
+  letter-spacing: 2px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
 @media only screen and (min-width: 1200px) {
   .playComp2 {
     width: 50vw;
