@@ -1,8 +1,10 @@
 @import 'flexbox';
 @import 'breakpoints';
+@import 'animations';
 
 .bg-triangle{
-    animation: fadeIn 500ms ease-out 0s forwards;
+    // animation: fadeIn 500ms ease-out 0s forwards;
+    @include fadeIn-anime;
     background-image: url('../assets/images/bg-triangle.svg');
     background-position: center;
     background-repeat: no-repeat;
@@ -13,7 +15,8 @@
     @include flexbox('', center, center);
     flex-wrap: wrap;
     // animation: name duration timing-function delay iteration-count direction fill-mode;
-    animation: scaleUp 500ms ease-out 0s forwards;
+    // animation: scaleUp 500ms ease-out 0s forwards;
+    @include scaleUp-anime;
 }
 .circle{
     width: 30%;
@@ -104,32 +107,5 @@
         width: 140px;
         // margin: 0 4% 4% 4%; 
         padding: 3%;  
-    }
-}
-
-@keyframes scaleUp {
-    // 0%{
-    //     // transform: scale(0%);
-    // }
-    0%{
-        transform: scale(90%);
-        opacity: 0;
-    }
-    100%{
-        transform: scale(100%);
-        opacity: 1;
-    }
-}
-@keyframes fadeIn {
-    0%{
-
-    }
-    1%{
-    }
-    2%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
     }
 }

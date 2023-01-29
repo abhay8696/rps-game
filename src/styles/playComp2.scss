@@ -1,5 +1,6 @@
 @import 'flexbox';
 @import 'breakpoints';
+@import 'animations';
 
 .playComp2{
     flex-direction: column;
@@ -41,6 +42,8 @@
 .result{
     @include flexbox(column, center, center);
     position: absolute;
+    opacity: 0;
+    @include fadeIn2-anime();
     .resultMsg{
         font-size: 4rem;
         margin-bottom: 1rem;

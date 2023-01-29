@@ -1,3 +1,39 @@
+@-webkit-keyframes scaleUp {
+  0% {
+    transform: scale(90%);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(100%);
+    opacity: 1;
+  }
+}
+@keyframes scaleUp {
+  0% {
+    transform: scale(90%);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(100%);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  2% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  2% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .playComp2 {
   flex-direction: column;
 }
@@ -50,6 +86,9 @@
   align-items: center;
   justify-content: center;
   position: absolute;
+  opacity: 0;
+  -webkit-animation: fadeIn 1000ms ease-out 500ms forwards;
+          animation: fadeIn 1000ms ease-out 500ms forwards;
 }
 .result .resultMsg {
   font-size: 4rem;

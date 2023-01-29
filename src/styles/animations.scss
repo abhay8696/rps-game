@@ -1,0 +1,42 @@
+
+
+@mixin scaleUp-anime{
+    // animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: scaleUp 500ms ease-out 0s forwards;
+}
+
+@mixin fadeIn-anime{
+    animation: fadeIn 500ms ease-out 0s forwards;
+}
+
+@mixin fadeIn2-anime{
+    animation: fadeIn 1000ms ease-out 500ms forwards;
+}
+
+
+@keyframes scaleUp {
+    // 0%{
+    //     // transform: scale(0%);
+    // }
+    0%{
+        transform: scale(90%);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(100%);
+        opacity: 1;
+    }
+}
+@keyframes fadeIn {
+    0%{
+
+    }
+    1%{
+    }
+    2%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

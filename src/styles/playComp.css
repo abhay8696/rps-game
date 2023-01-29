@@ -1,3 +1,39 @@
+@-webkit-keyframes scaleUp {
+  0% {
+    transform: scale(90%);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(100%);
+    opacity: 1;
+  }
+}
+@keyframes scaleUp {
+  0% {
+    transform: scale(90%);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(100%);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  2% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  2% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .bg-triangle {
   -webkit-animation: fadeIn 500ms ease-out 0s forwards;
           animation: fadeIn 500ms ease-out 0s forwards;
@@ -104,41 +140,5 @@
   .circle {
     width: 140px;
     padding: 3%;
-  }
-}
-@-webkit-keyframes scaleUp {
-  0% {
-    transform: scale(90%);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(100%);
-    opacity: 1;
-  }
-}
-@keyframes scaleUp {
-  0% {
-    transform: scale(90%);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(100%);
-    opacity: 1;
-  }
-}
-@-webkit-keyframes fadeIn {
-  2% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  2% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }/*# sourceMappingURL=playComp.css.map */
