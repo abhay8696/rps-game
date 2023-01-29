@@ -12,7 +12,7 @@ const PlayComp2 = (props) => {
     const { pick1, pick2, handleReset } = props;
     
     const 
-    handButton = type=> {
+    handButton = (type, pickedBy)=> {
         let hand;
         if(type==='rock') hand = rock;
         if(type==='paper') hand = paper;
@@ -31,7 +31,7 @@ const PlayComp2 = (props) => {
         }
         return (
             <>
-            <div className={`circle ${type}`}>
+            <div className={`circle circle2 ${type} ${pickedBy}`}>
                 <div className='imgDiv'>
                     <img src={hand}/>
                 </div>
@@ -60,12 +60,12 @@ const PlayComp2 = (props) => {
                 <div className='msg'>THE HOUSE PICKED</div>
             </div>
             <div className='innerDiv'>
-                {handButton(pick1)}
+                {handButton(pick1, 'pick1')}
                 <div className='result result1'>
                     <span className='resultMsg msg'>{getResult()}</span>
                     <span className='playAgain' onClick={()=> handleReset()}>PLAY AGAIN</span>
                 </div>
-                {handButton(pick2)}
+                {handButton(pick2, 'pick2')}
             </div>
             <div className='result result2'>
                 <span className='resultMsg msg'>{getResult()}</span>

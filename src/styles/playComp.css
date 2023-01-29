@@ -14,11 +14,11 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  -webkit-animation: scaleUp 500ms ease-out 0s forwards;
+          animation: scaleUp 500ms ease-out 0s forwards;
 }
 
 .circle {
-  -webkit-animation: scaleUp 3000ms ease-out 0s forwards;
-          animation: scaleUp 3000ms ease-out 0s forwards;
   width: 30%;
   aspect-ratio: 1;
   padding: 4%;
@@ -26,6 +26,7 @@
   border-radius: 50%;
   box-sizing: border-box;
   cursor: pointer;
+  transition: transform 500ms;
 }
 .circle .imgDiv {
   background-image: linear-gradient(to bottom, #ffffff, #f7f6f7, #f0edef, #e9e4e5, #e2dbdb);
@@ -40,6 +41,9 @@
 }
 .circle .imgDiv img {
   width: 50%;
+}
+.circle:hover {
+  transform: scale(110%) rotate(10deg);
 }
 
 .paper {
@@ -103,25 +107,23 @@
   }
 }
 @-webkit-keyframes scaleUp {
-  2% {
-    transform: scale(0%);
-  }
-  90% {
-    transform: scale(0%);
+  0% {
+    transform: scale(90%);
+    opacity: 0;
   }
   100% {
     transform: scale(100%);
+    opacity: 1;
   }
 }
 @keyframes scaleUp {
-  2% {
-    transform: scale(0%);
-  }
-  90% {
-    transform: scale(0%);
+  0% {
+    transform: scale(90%);
+    opacity: 0;
   }
   100% {
     transform: scale(100%);
+    opacity: 1;
   }
 }
 @-webkit-keyframes fadeIn {

@@ -12,10 +12,10 @@
     padding: 2rem;
     @include flexbox('', center, center);
     flex-wrap: wrap;
+    // animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: scaleUp 500ms ease-out 0s forwards;
 }
 .circle{
-    // animation: name duration timing-function delay iteration-count direction fill-mode;
-    animation: scaleUp 3000ms ease-out 0s forwards;
     width: 30%;
     aspect-ratio: 1;
     padding: 4%;  
@@ -35,6 +35,10 @@
         img{
             width: 50%;
         }
+    }
+    transition: transform 500ms;
+    &:hover{
+        transform: scale(110%) rotate(10deg);
     }
 }
 .paper{
@@ -104,19 +108,16 @@
 }
 
 @keyframes scaleUp {
+    // 0%{
+    //     // transform: scale(0%);
+    // }
     0%{
-
-    }
-    1%{
-    }
-    2%{
-        transform: scale(0%);
-    }
-    90%{
-        transform: scale(0%);
+        transform: scale(90%);
+        opacity: 0;
     }
     100%{
         transform: scale(100%);
+        opacity: 1;
     }
 }
 @keyframes fadeIn {
