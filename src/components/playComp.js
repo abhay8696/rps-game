@@ -17,7 +17,7 @@ const PlayComp = (props) => {
         return (
             <div className={`circle ${type}`} onClick={()=> handlePick(type)}>
                 <div className='imgDiv'>
-                    <img src={hand}/>
+                    <img src={hand} alt={hand}/>
                 </div>
             </div>
         )

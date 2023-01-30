@@ -7,7 +7,7 @@ import '../styles/rulesModal.css';
 
 const Rules = (props) => {
     const { closeModal } = props;
-    const image = <img src={closeButton} />;
+    const image = <img src={closeButton} alt={closeButton}/>;
     return (
         <div onClick={()=> closeModal()} className='rulesModal'>
             <div className='modalDiv' onClick={e=> e.stopPropagation()}>
@@ -17,7 +17,7 @@ const Rules = (props) => {
                         {image}
                     </span>
                 </div>
-                <img src={imageRules}/>
+                <img src={imageRules} alt={imageRules}/>
             </div>
         </div>
     );
