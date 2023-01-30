@@ -19,7 +19,7 @@
   }
 }
 @-webkit-keyframes fadeIn {
-  2% {
+  0% {
     opacity: 0;
   }
   100% {
@@ -27,10 +27,102 @@
   }
 }
 @keyframes fadeIn {
-  2% {
+  0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
+  }
+}
+@-webkit-keyframes appearIn {
+  0% {
+    opacity: 0;
+    transform: scale(0%);
+  }
+  90% {
+    opacity: 1;
+    transform: scale(110%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
+@keyframes appearIn {
+  0% {
+    opacity: 0;
+    transform: scale(0%);
+  }
+  90% {
+    opacity: 1;
+    transform: scale(110%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
+@-webkit-keyframes slideLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes slideLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@-webkit-keyframes slideRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(50%);
+  }
+}
+@keyframes slideRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(50%);
+  }
+}
+@-webkit-keyframes slideDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(50%);
+  }
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(50%);
+  }
+}
+@-webkit-keyframes slideUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50px);
+  }
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50px);
   }
 }/*# sourceMappingURL=animations.css.map */

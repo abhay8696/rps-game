@@ -10,9 +10,25 @@
 }
 
 @mixin fadeIn2-anime{
-    animation: fadeIn 1000ms ease-out 500ms forwards;
+    animation: fadeIn 1000ms ease-out 2000ms forwards;
 }
 
+@mixin appearIn-Anime{
+    animation: appearIn 500ms ease-out 500ms forwards;
+}
+
+@mixin slideLeft-anime{
+    animation: slideLeft 500ms ease-in-out 2000ms forwards;
+}
+@mixin slideRight-anime{
+    animation: slideRight 500ms ease-in-out 2000ms forwards;
+}
+@mixin slideUp-anime{
+    animation: slideUp 500ms ease-in-out 2000ms forwards;
+}
+@mixin slideDown-anime{
+    animation: slideDown 500ms ease-in-out 2000ms forwards;
+}
 
 @keyframes scaleUp {
     // 0%{
@@ -29,14 +45,56 @@
 }
 @keyframes fadeIn {
     0%{
-
-    }
-    1%{
-    }
-    2%{
         opacity: 0;
     }
     100%{
         opacity: 1;
+    }
+}
+
+@keyframes appearIn {
+    0%{
+        opacity: 0;
+        transform: scale(0%);
+    }
+    90%{
+        opacity: 1;
+        transform: scale(110%);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(100%);
+    }
+}
+@keyframes slideLeft {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-50%);
+    }
+}
+@keyframes slideRight{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(50%);
+    }
+}
+@keyframes slideDown{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(50%);
+    }
+}
+@keyframes slideUp{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-50px);
     }
 }

@@ -44,11 +44,11 @@ const PlayComp2 = (props) => {
         if(pick1 === pick2) return a = 'DRAW';
         // rock > scissors > paper > rock
         if(pick1 === 'rock'){
-            pick2 === 'paper' ? a = 'YOU LOSE' : a = 'YOU WIN';
+            pick2 === 'paper' ? a = 'YOU LOSE :(' : a = 'YOU WIN!';
         }else if(pick1 === 'paper'){
-            pick2 === 'scissors' ? a = 'YOU LOSE' : a = 'YOU WIN';
+            pick2 === 'scissors' ? a = 'YOU LOSE :(' : a = 'YOU WIN!';
         }else if(pick1 === 'scissors'){
-            pick2 === 'rock' ? a = 'YOU LOSE' : a = 'YOU WIN';
+            pick2 === 'rock' ? a = 'YOU LOSE :(' : a = 'YOU WIN!';
         }
 
         return a;

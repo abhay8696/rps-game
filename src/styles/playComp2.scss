@@ -10,6 +10,10 @@
     width: 100%;
     @include flexbox('', center, space-around);
 }
+.innerDiv{
+    opacity: 0;
+    @include appearIn-Anime();
+}
 .innerDiv1{
     margin-bottom: 3rem;
     font-size: 1.5rem;
@@ -64,7 +68,7 @@
         width: 50vw;
     }
 }
-@include lg-xl-screen{
+@include lg-xl-screen{ 
     .playComp2{
         width: 60vw;
     }
@@ -92,9 +96,22 @@
     .innerDiv2, .result2{
         display: none;
     }
+    .pick1, .innerDiv1 :first-child{
+        @include slideLeft-anime();
+    }
+    .pick2, .innerDiv1 :last-child{
+        @include slideRight-anime();   
+    }
 }
 @include sm-below-screen{
     .innerDiv1, .result1{
         display: none;
+    }
+    .pick1, .pick2, .innerDiv2{
+        @include slideUp-anime();   
+    }
+    .result{
+        // @include slideDown-anime(); 
+        transform: translateY(100%);
     }
 }

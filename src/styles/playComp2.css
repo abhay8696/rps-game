@@ -19,7 +19,7 @@
   }
 }
 @-webkit-keyframes fadeIn {
-  2% {
+  0% {
     opacity: 0;
   }
   100% {
@@ -27,11 +27,103 @@
   }
 }
 @keyframes fadeIn {
-  2% {
+  0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
+  }
+}
+@-webkit-keyframes appearIn {
+  0% {
+    opacity: 0;
+    transform: scale(0%);
+  }
+  90% {
+    opacity: 1;
+    transform: scale(110%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
+@keyframes appearIn {
+  0% {
+    opacity: 0;
+    transform: scale(0%);
+  }
+  90% {
+    opacity: 1;
+    transform: scale(110%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
+@-webkit-keyframes slideLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes slideLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@-webkit-keyframes slideRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(50%);
+  }
+}
+@keyframes slideRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(50%);
+  }
+}
+@-webkit-keyframes slideDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(50%);
+  }
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(50%);
+  }
+}
+@-webkit-keyframes slideUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50px);
+  }
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50px);
   }
 }
 .playComp2 {
@@ -44,6 +136,12 @@
   flex-direction: "";
   align-items: center;
   justify-content: space-around;
+}
+
+.innerDiv {
+  opacity: 0;
+  -webkit-animation: appearIn 500ms ease-out 500ms forwards;
+          animation: appearIn 500ms ease-out 500ms forwards;
 }
 
 .innerDiv1 {
@@ -87,8 +185,8 @@
   justify-content: center;
   position: absolute;
   opacity: 0;
-  -webkit-animation: fadeIn 1000ms ease-out 500ms forwards;
-          animation: fadeIn 1000ms ease-out 500ms forwards;
+  -webkit-animation: fadeIn 1000ms ease-out 2000ms forwards;
+          animation: fadeIn 1000ms ease-out 2000ms forwards;
 }
 .result .resultMsg {
   font-size: 4rem;
@@ -136,9 +234,24 @@
   .innerDiv2, .result2 {
     display: none;
   }
+  .pick1, .innerDiv1 :first-child {
+    -webkit-animation: slideLeft 500ms ease-in-out 2000ms forwards;
+            animation: slideLeft 500ms ease-in-out 2000ms forwards;
+  }
+  .pick2, .innerDiv1 :last-child {
+    -webkit-animation: slideRight 500ms ease-in-out 2000ms forwards;
+            animation: slideRight 500ms ease-in-out 2000ms forwards;
+  }
 }
 @media only screen and (max-width: 480px) {
   .innerDiv1, .result1 {
     display: none;
+  }
+  .pick1, .pick2, .innerDiv2 {
+    -webkit-animation: slideUp 500ms ease-in-out 2000ms forwards;
+            animation: slideUp 500ms ease-in-out 2000ms forwards;
+  }
+  .result {
+    transform: translateY(100%);
   }
 }/*# sourceMappingURL=playComp2.css.map */
