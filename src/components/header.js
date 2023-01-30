@@ -9,7 +9,7 @@ const Header = (props) => {
     const { score } = props;
     return (
         <div className='header'>
-            <img src={logo} className='logo'/>
+            <img src={logo} className='logo' alt='logo'/>
             <div className='scoreCard'>
                 <span className='scoreText'>SCORE</span>
                 <span className='score'>{score}</span>

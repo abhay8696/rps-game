@@ -33,7 +33,7 @@ const PlayComp2 = (props) => {
             <>
             <div className={`circle circle2 ${type} ${pickedBy}`}>
                 <div className='imgDiv'>
-                    <img src={hand} alt={hand}/>
+                    <img src={hand} alt={`${type}Image`}/>
                 </div>
             </div>
             </>
