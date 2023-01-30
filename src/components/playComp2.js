@@ -9,7 +9,7 @@ import paper from '../assets/images/icon-paper.svg';
 import scissors from '../assets/images/icon-scissors.svg';
 
 const PlayComp2 = (props) => {
-    const { pick1, pick2, handleReset } = props;
+    const { pick1, pick2, winnerMsg, handleReset } = props;
     
     const 
     handButton = (type, pickedBy)=> {
@@ -38,20 +38,6 @@ const PlayComp2 = (props) => {
             </div>
             </>
         )
-    },
-    getResult = ()=> {
-        let a;
-        if(pick1 === pick2) return a = 'DRAW';
-        // rock > scissors > paper > rock
-        if(pick1 === 'rock'){
-            pick2 === 'paper' ? a = 'YOU LOSE :(' : a = 'YOU WIN!';
-        }else if(pick1 === 'paper'){
-            pick2 === 'scissors' ? a = 'YOU LOSE :(' : a = 'YOU WIN!';
-        }else if(pick1 === 'scissors'){
-            pick2 === 'rock' ? a = 'YOU LOSE :(' : a = 'YOU WIN!';
-        }
-
-        return a;
     };
     return (
         <div className='playComp2'>
@@ -62,13 +48,13 @@ const PlayComp2 = (props) => {
             <div className='innerDiv'>
                 {handButton(pick1, 'pick1')}
                 <div className='result result1'>
-                    <span className='resultMsg msg'>{getResult()}</span>
+                    <span className='resultMsg msg'>{winnerMsg}</span>
                     <span className='playAgain' onClick={()=> handleReset()}>PLAY AGAIN</span>
                 </div>
                 {handButton(pick2, 'pick2')}
             </div>
             <div className='result result2'>
-                <span className='resultMsg msg'>{getResult()}</span>
+                <span className='resultMsg msg'>{winnerMsg}</span>
                 <span className='playAgain' onClick={()=> handleReset()}>PLAY AGAIN</span>
             </div>
             <div className='innerDiv2'>
