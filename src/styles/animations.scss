@@ -29,6 +29,9 @@
 @mixin slideDown-anime{
     animation: slideDown 500ms ease-in-out 2000ms forwards;
 }
+@mixin appearFromCorner-anime{
+    animation: appearFromCorner 500ms ease-in-out 0ms forwards;
+}
 
 @keyframes scaleUp {
     // 0%{
@@ -71,7 +74,7 @@
         transform: translateX(0);
     }
     to{
-        transform: translateX(-50%);
+        transform: translateX(-50%) scale(110%);
     }
 }
 @keyframes slideRight{
@@ -79,7 +82,7 @@
         transform: translateX(0);
     }
     to{
-        transform: translateX(50%);
+        transform: translateX(50%) scale(110%);
     }
 }
 @keyframes slideDown{
@@ -96,5 +99,16 @@
     }
     to{
         transform: translateY(-50px);
+    }
+}
+
+@keyframes appearFromCorner {
+    0%{
+        transform: scale(0%) ;
+        transform-origin: bottom right;
+    }
+    100%{
+        opacity: 1;
+        transform: scale(100%);
     }
 }

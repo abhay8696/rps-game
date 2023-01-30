@@ -67,7 +67,7 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(-50%);
+    transform: translateX(-50%) scale(110%);
   }
 }
 @keyframes slideLeft {
@@ -75,7 +75,7 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(-50%);
+    transform: translateX(-50%) scale(110%);
   }
 }
 @-webkit-keyframes slideRight {
@@ -83,7 +83,7 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(50%);
+    transform: translateX(50%) scale(110%);
   }
 }
 @keyframes slideRight {
@@ -91,7 +91,7 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(50%);
+    transform: translateX(50%) scale(110%);
   }
 }
 @-webkit-keyframes slideDown {
@@ -124,5 +124,25 @@
   }
   to {
     transform: translateY(-50px);
+  }
+}
+@-webkit-keyframes appearFromCorner {
+  0% {
+    transform: scale(0%);
+    transform-origin: bottom right;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
+@keyframes appearFromCorner {
+  0% {
+    transform: scale(0%);
+    transform-origin: bottom right;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(100%);
   }
 }/*# sourceMappingURL=animations.css.map */

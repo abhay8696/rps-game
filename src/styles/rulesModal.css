@@ -1,3 +1,151 @@
+@-webkit-keyframes scaleUp {
+  0% {
+    transform: scale(90%);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(100%);
+    opacity: 1;
+  }
+}
+@keyframes scaleUp {
+  0% {
+    transform: scale(90%);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(100%);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes appearIn {
+  0% {
+    opacity: 0;
+    transform: scale(0%);
+  }
+  90% {
+    opacity: 1;
+    transform: scale(110%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
+@keyframes appearIn {
+  0% {
+    opacity: 0;
+    transform: scale(0%);
+  }
+  90% {
+    opacity: 1;
+    transform: scale(110%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
+@-webkit-keyframes slideLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%) scale(110%);
+  }
+}
+@keyframes slideLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%) scale(110%);
+  }
+}
+@-webkit-keyframes slideRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(50%) scale(110%);
+  }
+}
+@keyframes slideRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(50%) scale(110%);
+  }
+}
+@-webkit-keyframes slideDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(50%);
+  }
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(50%);
+  }
+}
+@-webkit-keyframes slideUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50px);
+  }
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50px);
+  }
+}
+@-webkit-keyframes appearFromCorner {
+  0% {
+    transform: scale(0%);
+    transform-origin: bottom right;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
+@keyframes appearFromCorner {
+  0% {
+    transform: scale(0%);
+    transform-origin: bottom right;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
 .rulesModal {
   background-color: rgba(0, 0, 0, 0.466);
   width: 100vw;
@@ -9,6 +157,9 @@
   justify-content: center;
 }
 .rulesModal .modalDiv {
+  opacity: 0;
+  -webkit-animation: appearFromCorner 500ms ease-in-out 0ms forwards;
+          animation: appearFromCorner 500ms ease-in-out 0ms forwards;
   padding: 1rem 3rem;
   margin: auto 0.5rem;
   box-sizing: border-box;

@@ -108,10 +108,9 @@
         display: none;
     }
     .pick1, .pick2, .innerDiv2{
-        @include slideUp-anime();   
+        @include slideUp-anime();    
     }
     .result{
-        // @include slideDown-anime(); 
         transform: translateY(100%);
     }
 }

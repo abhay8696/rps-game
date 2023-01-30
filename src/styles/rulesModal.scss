@@ -1,5 +1,6 @@
 @import 'flexbox';
 @import 'breakpoints';
+@import 'animations';
 
 .rulesModal{
     background-color: rgba(0, 0, 0, 0.466);
@@ -8,12 +9,14 @@
     position: absolute;
     @include flexbox('', center, center);
     .modalDiv{
+        opacity: 0;
+        @include appearFromCorner-anime();
         padding: 1rem 3rem;
         margin: auto 0.5rem;
         box-sizing: border-box;
         background-color: #fff;
         border-radius: 1rem;
-        img{
+        img{  
             margin-top: 1rem;
             @include sm-below-screen{
                 max-width: 70vw;
