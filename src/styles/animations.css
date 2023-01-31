@@ -145,4 +145,24 @@
     opacity: 1;
     transform: scale(100%);
   }
+}
+@-webkit-keyframes appearFromBottom {
+  0% {
+    transform: scale(0%);
+    transform-origin: bottom;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
+@keyframes appearFromBottom {
+  0% {
+    transform: scale(0%);
+    transform-origin: bottom;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(100%);
+  }
 }/*# sourceMappingURL=animations.css.map */

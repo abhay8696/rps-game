@@ -29,8 +29,19 @@
 @mixin slideDown-anime{
     animation: slideDown 500ms ease-in-out 2000ms forwards;
 }
-@mixin appearFromCorner-anime{
+@mixin appearFromCorner-animeON{
     animation: appearFromCorner 500ms ease-in-out 0ms forwards;
+}
+@mixin appearFromBottom-animeON{
+    animation: appearFromBottom 500ms ease-in-out 0ms forwards;
+}
+@mixin appearFromCorner-animeOFF{
+    animation: appearFromCorner 500ms ease-in-out 0ms forwards;
+    animation-direction: reverse;
+}
+@mixin appearFromBottom-animeOFF{
+    animation: appearFromBottom 500ms ease-in-out 0ms forwards;
+    animation-direction: reverse;
 }
 
 @keyframes scaleUp {
@@ -106,6 +117,17 @@
     0%{
         transform: scale(0%) ;
         transform-origin: bottom right;
+    }
+    100%{
+        opacity: 1;
+        transform: scale(100%);
+    }
+}
+
+@keyframes appearFromBottom {
+    0%{
+        transform: scale(0%) ;
+        transform-origin: bottom;
     }
     100%{
         opacity: 1;

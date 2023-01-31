@@ -146,11 +146,32 @@
     transform: scale(100%);
   }
 }
+@-webkit-keyframes appearFromBottom {
+  0% {
+    transform: scale(0%);
+    transform-origin: bottom;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
+@keyframes appearFromBottom {
+  0% {
+    transform: scale(0%);
+    transform-origin: bottom;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
 .rulesModal {
   background-color: rgba(0, 0, 0, 0.466);
   width: 100vw;
   height: 100vh;
   position: absolute;
+  transform: scale(0%);
   display: flex;
   flex-direction: "";
   align-items: center;
@@ -158,8 +179,6 @@
 }
 .rulesModal .modalDiv {
   opacity: 0;
-  -webkit-animation: appearFromCorner 500ms ease-in-out 0ms forwards;
-          animation: appearFromCorner 500ms ease-in-out 0ms forwards;
   padding: 1rem 3rem;
   margin: auto 0.5rem;
   box-sizing: border-box;
@@ -193,4 +212,38 @@
 }
 .rulesModal .modalDiv .modalHeader img {
   cursor: pointer;
+}
+
+@media only screen and (min-width: 480px) {
+  .modalOff {
+    -webkit-animation: appearFromCorner 500ms ease-in-out 0ms forwards;
+            animation: appearFromCorner 500ms ease-in-out 0ms forwards;
+    animation-direction: reverse;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .modalOff {
+    -webkit-animation: appearFromBottom 500ms ease-in-out 0ms forwards;
+            animation: appearFromBottom 500ms ease-in-out 0ms forwards;
+    animation-direction: reverse;
+  }
+}
+.modalOff .modalDiv {
+  opacity: 1;
+}
+
+.modalOn {
+  transform: scale(100%);
+}
+@media only screen and (min-width: 480px) {
+  .modalOn .modalDiv {
+    -webkit-animation: appearFromCorner 500ms ease-in-out 0ms forwards;
+            animation: appearFromCorner 500ms ease-in-out 0ms forwards;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .modalOn .modalDiv {
+    -webkit-animation: appearFromBottom 500ms ease-in-out 0ms forwards;
+            animation: appearFromBottom 500ms ease-in-out 0ms forwards;
+  }
 }/*# sourceMappingURL=rulesModal.css.map */

@@ -61,7 +61,7 @@ function App() {
       }
       <div className='dummy'></div>
       <div className='rulesButton' onClick={()=> setRulesModal(true)}>RULES</div>
-      {rulesModal ? <Rules closeModal={closeModal} /> : null}
+      <Rules closeModal={closeModal} rulesModal={rulesModal}/>
     </div>
   );
 }

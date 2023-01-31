@@ -7,10 +7,10 @@
     width: 100vw;
     height: 100vh;
     position: absolute;
+    transform: scale(0%);
     @include flexbox('', center, center);
     .modalDiv{
         opacity: 0;
-        @include appearFromCorner-anime();
         padding: 1rem 3rem;
         margin: auto 0.5rem;
         box-sizing: border-box;
@@ -35,6 +35,28 @@
             img{
                 cursor: pointer;
             }
+        }
+    }
+}
+.modalOff{
+    @include sm-above-screen{
+        @include appearFromCorner-animeOFF(); 
+    }
+    @include sm-below-screen{
+        @include appearFromBottom-animeOFF(); 
+    }
+    .modalDiv{
+        opacity: 1; 
+    }
+} 
+.modalOn{
+    transform: scale(100%);
+    .modalDiv{
+        @include sm-above-screen{
+            @include appearFromCorner-animeON(); 
+        }
+        @include sm-below-screen{
+            @include appearFromBottom-animeON(); 
         }
     }
 }
