@@ -13,10 +13,15 @@ const PlayComp2 = (props) => {
     
     const 
     handButton = (type, pickedBy)=> {
-        let hand;
+        let hand, winnerShadow='';
         if(type==='rock') hand = rock;
         if(type==='paper') hand = paper;
         if(type==='scissors') hand = scissors;
+        if(winnerMsg === 'YOU WIN!' && pickedBy==='pick1'){
+            winnerShadow = 'winnerShadow';
+        }else if(winnerMsg === 'YOU LOSE :(' && pickedBy==='pick2'){
+            winnerShadow = 'winnerShadow';
+        }
 
         if(!type){
             return (
@@ -31,7 +36,7 @@ const PlayComp2 = (props) => {
         }
         return (
             <>
-            <div className={`circle circle2 ${type} ${pickedBy}`}>
+            <div className={`circle circle2 ${type} ${pickedBy} ${winnerShadow}`}>
                 <div className='imgDiv'>
                     <img src={hand} alt={`${type}Image`}/>
                 </div>

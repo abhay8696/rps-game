@@ -102,6 +102,9 @@
     .pick2, .innerDiv1 :last-child{
         @include slideRight-anime();   
     }
+    .winnerShadow{
+        box-shadow:0 0 2px 50px #ffffff10, 0 0 4px 125px #afaeae18, 0 0 5px 200px #afaeae09;
+    }
 }
 @include sm-below-screen{
     .innerDiv1, .result1{
@@ -113,4 +116,8 @@
     .result{
         transform: translateY(100%);
     }
+    .winnerShadow{
+        box-shadow:0 0 2px 20px #ffffff10, 0 0 4px 40px #afaeae18, 0 0 5px 60px #afaeae09;
+    }
 }
+
