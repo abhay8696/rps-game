@@ -352,6 +352,7 @@
 }
 .playComp2, .disappearPlayComp2 {
   flex-direction: column;
+  height: 100%;
 }
 
 .playComp2 {

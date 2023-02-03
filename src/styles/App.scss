@@ -24,6 +24,34 @@
 .App > *{
     box-sizing: border-box;
 }
+.container{
+    flex: 1;
+    @include flexbox('', center, center);
+    & > *{
+        box-sizing: border-box;
+    }
+    position: relative;
+}
+@include xl-above-screen{
+    .container{
+        width: 50vw;
+    }
+}
+@include lg-xl-screen{
+    .container{
+        width: 60vw;
+    }
+}
+@include lg-below-screen{
+    .container{
+        width: 80vw;
+    }
+}
+@include sm-below-screen{
+    .container{
+        width: 90vw;
+    }
+}
 
 @include sm-below-screen{
     .dummy{

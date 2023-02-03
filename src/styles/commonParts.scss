@@ -46,6 +46,21 @@
     -moz-box-shadow: 0px 8px 2px 0px  #b62741;
     box-shadow: 0px 8px 2px 0px  #b62741;
 }
+.lizard{
+    background: radial-gradient(circle at top, #834fe3, #8c5de5);
+    -webkit-box-shadow: 0px 8px 2px 0px  #b62741;
+    -moz-box-shadow: 0px 8px 2px 0px  #b62741;
+    box-shadow: 0px 8px 2px 0px  #b62741;
+}
+.spock{
+    background: radial-gradient(circle at top, #40b9ce, #52bed1);
+    -webkit-box-shadow: 0px 8px 2px 0px  #b62741;
+    -moz-box-shadow: 0px 8px 2px 0px  #b62741;
+    box-shadow: 0px 8px 2px 0px  #b62741;
+}
+
+// - Lizard Gradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%)
+// - Cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%)
 
 @include xl-above-screen{
     .circle{

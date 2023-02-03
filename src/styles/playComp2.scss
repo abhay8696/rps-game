@@ -5,6 +5,7 @@
 
 .playComp2, .disappearPlayComp2{
     flex-direction: column;
+    height: 100%;
 }
 .playComp2{
     @include scaleUp-anime(normal);

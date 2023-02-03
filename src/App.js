@@ -4,6 +4,7 @@ import Header from './components/header';
 import PlayComp from './components/playComp';
 import PlayComp2 from './components/playComp2';
 import Rules from './components/rules';
+import SheldonComp from './components/sheldonComp';
 //styles
 import './styles/App.css';
 
@@ -55,6 +56,9 @@ function App() {
     if(!pick1) return <PlayComp sheldon={sheldon} handlePick={handlePick}/> 
     return <PlayComp2 sheldon={sheldon} pick1={pick1} pick2={pick2} handleReset={handleReset} winnerMsg={winnerMsg}/>
   },
+  displaySheldon = ()=> {
+    return <SheldonComp sheldon={sheldon} handlePick={handlePick}/> 
+  },
   handleSheldon = ()=> {
     setSheldon(!sheldon);
     handleReset();
@@ -63,7 +67,10 @@ function App() {
   return (
     <div className="App">
       <Header score={score}/>
-      { displayOriginal() }
+      <div className='container'>
+        { displayOriginal() }
+        { displaySheldon() }
+      </div>
       <div className='dummy' onClick={()=> handleSheldon()}>
         <button>SHELDON</button>
       </div>
