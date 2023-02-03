@@ -14,6 +14,7 @@ function App() {
   const [pick2, setPick2] = useState();
   const [score, setScore] = useState(0);
   const [winnerMsg, setWinnerMsg] = useState('');
+  const [sheldon, setSheldon] = useState(false);
   //lifecycle
   useEffect(()=> {
     let s = +window.localStorage.getItem('score');
@@ -50,16 +51,22 @@ function App() {
     setPick1(undefined);
     setPick2(undefined);
   },
-  resetScore = ()=> setScore(0);
+  displayOriginal = ()=> {
+    if(!pick1) return <PlayComp sheldon={sheldon} handlePick={handlePick}/> 
+    return <PlayComp2 sheldon={sheldon} pick1={pick1} pick2={pick2} handleReset={handleReset} winnerMsg={winnerMsg}/>
+  },
+  handleSheldon = ()=> {
+    setSheldon(!sheldon);
+    handleReset();
+  }
+  
   return (
     <div className="App">
       <Header score={score}/>
-      {
-        !pick1 
-        ? <PlayComp handlePick={handlePick}/> 
-        : <PlayComp2  pick1={pick1} pick2={pick2} handleReset={handleReset} winnerMsg={winnerMsg}/>
-      }
-      <div className='dummy'></div>
+      { displayOriginal() }
+      <div className='dummy' onClick={()=> handleSheldon()}>
+        <button>SHELDON</button>
+      </div>
       <div className='rulesButton' onClick={()=> setRulesModal(true)}>RULES</div>
       <Rules closeModal={closeModal} rulesModal={rulesModal}/>
     </div>

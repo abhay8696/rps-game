@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 //styles
 import '../styles/playComp.css';
 import '../styles/playComp2.css';
@@ -9,9 +9,12 @@ import paper from '../assets/images/icon-paper.svg';
 import scissors from '../assets/images/icon-scissors.svg';
 
 const PlayComp2 = (props) => {
-    const { pick1, pick2, winnerMsg, handleReset } = props;
-    
-    const 
+    const { pick1, pick2, winnerMsg, handleReset, sheldon } = props;
+    const class_name = useRef('playComp2');
+    if(sheldon) {
+        class_name.current = 'disappearPlayComp2';
+    } else class_name.current = 'playComp2';
+    const
     handButton = (type, pickedBy)=> {
         let hand, winnerShadow='';
         if(type==='rock') hand = rock;
@@ -45,7 +48,7 @@ const PlayComp2 = (props) => {
         )
     };
     return (
-        <div className='playComp2'>
+        <div className={`${class_name.current}`}>
             <div className='innerDiv1'>
                 <div className='msg'>YOU PICKED</div>
                 <div className='msg'>THE HOUSE PICKED</div>

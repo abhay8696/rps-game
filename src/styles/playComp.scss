@@ -8,15 +8,19 @@
     background-image: url('../assets/images/bg-triangle.svg');
     background-position: center;
     background-repeat: no-repeat;
-}
-.playComp{
+} 
+.playComp, .disappearPlayComp{
     flex: 1;
     padding: 2rem;
     @include flexbox('', center, center);
     flex-wrap: wrap;
-    // animation: name duration timing-function delay iteration-count direction fill-mode;
-    // animation: scaleUp 500ms ease-out 0s forwards;
-    @include scaleUp-anime;
+}
+.playComp{
+    @include scaleUp-anime(normal);
+}
+.disappearPlayComp{
+    opacity: 1; 
+    @include scaleZero-anime(normal);
 }
 .circle{
     width: 30%;
@@ -64,7 +68,7 @@
 }
 
 @include xl-above-screen{
-    .playComp{
+    .playComp, .disappearPlayComp{
         width: 50vw;
     }
     .circle{
@@ -72,7 +76,7 @@
     }
 }
 @include lg-xl-screen{
-    .playComp{
+    .playComp, .disappearPlayComp{
         width: 60vw;
     }
     .circle{
@@ -80,7 +84,7 @@
     }
 }
 @include md-lg-screen{
-    .playComp{
+    .playComp, .disappearPlayComp{
         width: 80vw;
     }
     .circle{
@@ -88,7 +92,7 @@
     }
 }
 @include sm-md-screen{
-    .playComp{
+    .playComp, .disappearPlayComp{
         width: 80vw;
         padding: 1rem;
     }
@@ -98,7 +102,7 @@
     }
 }
 @include sm-below-screen{
-    .playComp{
+    .playComp, .disappearPlayComp{
         width: 90vw;
         max-height: 50vh;
         padding: 0rem;

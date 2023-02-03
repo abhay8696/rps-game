@@ -1,8 +1,14 @@
 
 
-@mixin scaleUp-anime{
+@mixin scaleUp-anime($direction: 'normal'){
     // animation: name duration timing-function delay iteration-count direction fill-mode;
     animation: scaleUp 500ms ease-out 0s forwards;
+    animation-direction: $direction;   
+}
+@mixin scaleZero-anime($direction: 'normal'){
+    // animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: scaleZero 500ms ease-out 0s forwards;
+    animation-direction: $direction;   
 }
 
 @mixin fadeIn-anime{
@@ -55,6 +61,19 @@
     100%{
         transform: scale(100%);
         opacity: 1;
+    }
+}
+@keyframes scaleZero {
+    // 0%{
+    //     // transform: scale(0%);
+    // }
+    0%{
+        transform: scale(100%);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(0%);
+        opacity: 0;
     }
 }
 @keyframes fadeIn {

@@ -2,8 +2,15 @@
 @import 'breakpoints';
 @import 'animations';
 
-.playComp2{
+.playComp2, .disappearPlayComp2{
     flex-direction: column;
+}
+.playComp2{
+    @include scaleUp-anime(normal);
+}
+.disappearPlayComp2{
+    opacity: 1; 
+    @include scaleZero-anime(normal); 
 }
 
 .innerDiv, .innerDiv1, .innerDiv2{
@@ -38,7 +45,7 @@
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }
 
-.playComp2{
+.playComp2, .disappearPlayComp2{
     flex: 1;
     padding: 2rem;
     @include flexbox('', center, center);
@@ -64,28 +71,28 @@
 }
 
 @include xl-above-screen{
-    .playComp2{
+    .playComp2, .disappearPlayComp2{
         width: 50vw;
     }
 }
 @include lg-xl-screen{ 
-    .playComp2{
+    .playComp2, .disappearPlayComp2{
         width: 60vw;
     }
 }
 @include md-lg-screen{
-    .playComp2{
+    .playComp2, .disappearPlayComp2{
         width: 80vw;
     }
 }
 @include sm-md-screen{
-    .playComp2{
+    .playComp2, .disappearPlayComp2{
         width: 80vw;
         padding: 1rem;
     }
 }
 @include sm-below-screen{
-    .playComp2{
+    .playComp2, .disappearPlayComp2{
         width: 90vw;
         max-height: 50vh;
         padding: 0rem;

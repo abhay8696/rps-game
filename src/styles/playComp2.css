@@ -18,6 +18,26 @@
     opacity: 1;
   }
 }
+@-webkit-keyframes scaleZero {
+  0% {
+    transform: scale(100%);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0%);
+    opacity: 0;
+  }
+}
+@keyframes scaleZero {
+  0% {
+    transform: scale(100%);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0%);
+    opacity: 0;
+  }
+}
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
@@ -146,8 +166,43 @@
     transform: scale(100%);
   }
 }
-.playComp2 {
+@-webkit-keyframes appearFromBottom {
+  0% {
+    transform: scale(0%);
+    transform-origin: bottom;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
+@keyframes appearFromBottom {
+  0% {
+    transform: scale(0%);
+    transform-origin: bottom;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
+.playComp2, .disappearPlayComp2 {
   flex-direction: column;
+}
+
+.playComp2 {
+  -webkit-animation: scaleUp 500ms ease-out 0s forwards;
+          animation: scaleUp 500ms ease-out 0s forwards;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+}
+
+.disappearPlayComp2 {
+  opacity: 1;
+  -webkit-animation: scaleZero 500ms ease-out 0s forwards;
+          animation: scaleZero 500ms ease-out 0s forwards;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
 }
 
 .innerDiv, .innerDiv1, .innerDiv2 {
@@ -189,7 +244,7 @@
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
-.playComp2 {
+.playComp2, .disappearPlayComp2 {
   flex: 1;
   padding: 2rem;
   display: flex;
@@ -223,28 +278,28 @@
 }
 
 @media only screen and (min-width: 1200px) {
-  .playComp2 {
+  .playComp2, .disappearPlayComp2 {
     width: 50vw;
   }
 }
 @media only screen and (min-width: 960px) and (max-width: 1200px) {
-  .playComp2 {
+  .playComp2, .disappearPlayComp2 {
     width: 60vw;
   }
 }
 @media only screen and (min-width: 720px) and (max-width: 960px) {
-  .playComp2 {
+  .playComp2, .disappearPlayComp2 {
     width: 80vw;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 720px) {
-  .playComp2 {
+  .playComp2, .disappearPlayComp2 {
     width: 80vw;
     padding: 1rem;
   }
 }
 @media only screen and (max-width: 480px) {
-  .playComp2 {
+  .playComp2, .disappearPlayComp2 {
     width: 90vw;
     max-height: 50vh;
     padding: 0rem;

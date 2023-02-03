@@ -18,6 +18,26 @@
     opacity: 1;
   }
 }
+@-webkit-keyframes scaleZero {
+  0% {
+    transform: scale(100%);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0%);
+    opacity: 0;
+  }
+}
+@keyframes scaleZero {
+  0% {
+    transform: scale(100%);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0%);
+    opacity: 0;
+  }
+}
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
