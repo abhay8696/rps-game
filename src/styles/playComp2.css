@@ -186,6 +186,170 @@
     transform: scale(100%);
   }
 }
+@keyframes scaleUp {
+  0% {
+    transform: scale(90%);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(100%);
+    opacity: 1;
+  }
+}
+@keyframes scaleZero {
+  0% {
+    transform: scale(100%);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0%);
+    opacity: 0;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes appearIn {
+  0% {
+    opacity: 0;
+    transform: scale(0%);
+  }
+  90% {
+    opacity: 1;
+    transform: scale(110%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
+@keyframes slideLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%) scale(110%);
+  }
+}
+@keyframes slideRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(50%) scale(110%);
+  }
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(50%);
+  }
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50px);
+  }
+}
+@keyframes appearFromCorner {
+  0% {
+    transform: scale(0%);
+    transform-origin: bottom right;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
+@keyframes appearFromBottom {
+  0% {
+    transform: scale(0%);
+    transform-origin: bottom;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
+.circle {
+  width: 30%;
+  aspect-ratio: 1;
+  padding: 4%;
+  margin: 0 5% 5% 5%;
+  border-radius: 50%;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: transform 500ms;
+}
+.circle .imgDiv {
+  background-image: linear-gradient(to bottom, #ffffff, #f7f6f7, #f0edef, #e9e4e5, #e2dbdb);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: "";
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0px 8px 2px 0px rgba(139, 138, 138, 0.507);
+}
+.circle .imgDiv img {
+  width: 50%;
+}
+.circle:hover {
+  transform: scale(110%) rotate(10deg);
+}
+
+.paper {
+  background: radial-gradient(circle at top, #4865f4, #5671f5);
+  box-shadow: 0px 8px 2px 0px #2947df;
+}
+
+.scissors {
+  background: radial-gradient(circle at top, #ec9e0e, #eca922);
+  box-shadow: 0px 8px 2px 0px #c58d25;
+}
+
+.rock {
+  background: radial-gradient(circle at top, #dc2e4e, #dd405d);
+  box-shadow: 0px 8px 2px 0px #b62741;
+}
+
+@media only screen and (min-width: 1200px) {
+  .circle {
+    width: 200px;
+  }
+}
+@media only screen and (min-width: 960px) and (max-width: 1200px) {
+  .circle {
+    width: 180px;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 960px) {
+  .circle {
+    width: 180px;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 720px) {
+  .circle {
+    width: 150px;
+    margin: 0 3% 3% 3%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .circle {
+    width: 140px;
+    padding: 3%;
+  }
+}
 .playComp2, .disappearPlayComp2 {
   flex-direction: column;
 }

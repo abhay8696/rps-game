@@ -1,6 +1,7 @@
 @import 'flexbox';
 @import 'breakpoints';
 @import 'animations';
+@import 'commonParts';
 
 .bg-triangle{
     // animation: fadeIn 500ms ease-out 0s forwards;
@@ -22,73 +23,22 @@
     opacity: 1; 
     @include scaleZero-anime(normal);
 }
-.circle{
-    width: 30%;
-    aspect-ratio: 1;
-    padding: 4%;  
-    margin: 0 5% 5% 5%; 
-    border-radius: 50%;
-    box-sizing: border-box;
-    cursor: pointer;
-    .imgDiv{
-        background-image: linear-gradient(to bottom, #ffffff, #f7f6f7, #f0edef, #e9e4e5, #e2dbdb);
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        @include flexbox('', center, center);
-        -webkit-box-shadow: inset 0px 8px 2px 0px rgba(139, 138, 138, 0.507);
-        -moz-box-shadow: inset 0px 8px 2px 0px  rgba(139, 138, 138, 0.507);
-        box-shadow: inset 0px 8px 2px 0px  rgba(139, 138, 138, 0.507);
-        img{
-            width: 50%;
-        }
-    }
-    transition: transform 500ms;
-    &:hover{
-        transform: scale(110%) rotate(10deg);
-    }
-}
-.paper{
-    background: radial-gradient(circle at top, #4865f4, #5671f5);
-    -webkit-box-shadow: 0px 8px 2px 0px  #2947df;
-    -moz-box-shadow: 0px 8px 2px 0px  #2947df;
-    box-shadow: 0px 8px 2px 0px  #2947df;
-}
-.scissors{
-    background: radial-gradient(circle at top, #ec9e0e, #eca922);
-    -webkit-box-shadow: 0px 8px 2px 0px  #c58d25;
-    -moz-box-shadow: 0px 8px 2px 0px  #c58d25;
-    box-shadow: 0px 8px 2px 0px  #c58d25;
-}
-.rock{
-    background: radial-gradient(circle at top, #dc2e4e, #dd405d);
-    -webkit-box-shadow: 0px 8px 2px 0px  #b62741;
-    -moz-box-shadow: 0px 8px 2px 0px  #b62741;
-    box-shadow: 0px 8px 2px 0px  #b62741;
-}
+
+
 
 @include xl-above-screen{
     .playComp, .disappearPlayComp{
         width: 50vw;
-    }
-    .circle{
-        width: 200px;
     }
 }
 @include lg-xl-screen{
     .playComp, .disappearPlayComp{
         width: 60vw;
     }
-    .circle{
-        width: 180px;
-    }
 }
 @include md-lg-screen{
     .playComp, .disappearPlayComp{
         width: 80vw;
-    }
-    .circle{
-        width: 180px;
     }
 }
 @include sm-md-screen{
@@ -96,20 +46,11 @@
         width: 80vw;
         padding: 1rem;
     }
-    .circle{
-        width: 150px;
-        margin: 0 3% 3% 3%; 
-    }
 }
 @include sm-below-screen{
     .playComp, .disappearPlayComp{
         width: 90vw;
         max-height: 50vh;
         padding: 0rem;
-    }
-    .circle{
-        width: 140px;
-        // margin: 0 4% 4% 4%; 
-        padding: 3%;  
     }
 }

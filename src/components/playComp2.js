@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 //styles
-import '../styles/playComp.css';
 import '../styles/playComp2.css';
 //assets
 import bgTriangle from '../assets/images/bg-triangle.svg';
