@@ -6,19 +6,23 @@ import bgTriangle from '../assets/images/bg-triangle.svg';
 import rock from '../assets/images/icon-rock.svg';
 import paper from '../assets/images/icon-paper.svg';
 import scissors from '../assets/images/icon-scissors.svg';
+import spock from '../assets/images/icon-spock.svg';
+import lizard from '../assets/images/icon-lizard.svg';
 
 const PlayComp2 = (props) => {
     const { pick1, pick2, winnerMsg, handleReset, sheldon } = props;
     const class_name = useRef('playComp2');
-    if(sheldon) {
-        class_name.current = 'disappearPlayComp2';
-    } else class_name.current = 'playComp2';
+    // if(sheldon) {
+    //     class_name.current = 'disappearPlayComp2';
+    // } else class_name.current = 'playComp2';
     const
     handButton = (type, pickedBy)=> {
         let hand, winnerShadow='';
         if(type==='rock') hand = rock;
         if(type==='paper') hand = paper;
         if(type==='scissors') hand = scissors;
+        if(type==='spock') hand = spock;
+        if(type==='lizard') hand = lizard;
         if(winnerMsg === 'YOU WIN!' && pickedBy==='pick1'){
             winnerShadow = 'winnerShadow';
         }else if(winnerMsg === 'YOU LOSE :(' && pickedBy==='pick2'){
@@ -47,7 +51,7 @@ const PlayComp2 = (props) => {
         )
     };
     return (
-        <div className={`${class_name.current}`}>
+        <div className='playComp2'>
             <div className='innerDiv1'>
                 <div className='msg'>YOU PICKED</div>
                 <div className='msg'>THE HOUSE PICKED</div>

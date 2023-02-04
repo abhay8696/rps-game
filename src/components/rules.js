@@ -1,12 +1,13 @@
 import React, { useRef } from 'react';
 //assets
 import imageRules from '../assets/images/image-rules.svg';
+import imageRulesBonus from '../assets/images/image-rules-bonus.svg';
 import closeButton from '../assets/images/icon-close.svg';
 //styles
 import '../styles/rulesModal.css';
 
 const Rules = (props) => {
-    const { closeModal, rulesModal } = props;
+    const { closeModal, rulesModal, sheldon } = props;
     const image = <img src={closeButton} alt='close button'/>;
     //states
     const modalOnOff = useRef('');
@@ -26,7 +27,12 @@ const Rules = (props) => {
                         {image}
                     </span>
                 </div>
-                <img src={imageRules} alt='rules image'/>
+                {
+                    !sheldon 
+                    ? <img src={imageRules} alt='rules image'/>
+                    : <img src={imageRulesBonus} alt='bonus rules image'/>
+                }
+                
             </div>
         </div>
     );
