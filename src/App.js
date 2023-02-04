@@ -25,7 +25,16 @@ function App() {
   const
   closeModal = ()=>  setRulesModal(false),
   handlePick = playerPick=> {
-    let housePick = ['', 'rock', 'paper', 'scissors'][Math.floor(Math.random()*3)+1]
+    let options, housePick;
+    if(!sheldon){
+      options = ['', 'rock', 'paper', 'scissors'];
+      housePick = options[Math.floor(Math.random()*3)+1];
+    }
+    if(sheldon){
+      options = ['', 'rock', 'paper', 'scissors', 'spock', 'lizard'];
+      housePick = options[Math.floor(Math.random()*5)+1];
+    }
+    
     setPick1(playerPick);
     setPick2(housePick);
     let whoWon = decideWinner(playerPick, housePick);
@@ -40,11 +49,29 @@ function App() {
     if(playerPick === housePick) return a = 'DRAW';
     // rock > scissors > paper > rock
     if(playerPick === 'rock'){
-        housePick === 'paper' ? a = 'YOU LOSE :(' : a = 'YOU WIN!';
-    }else if(playerPick === 'paper'){
-        housePick === 'scissors' ? a = 'YOU LOSE :(' : a = 'YOU WIN!';
-    }else if(playerPick === 'scissors'){
-        housePick === 'rock' ? a = 'YOU LOSE :(' : a = 'YOU WIN!';
+        if(housePick === 'paper' || housePick === 'spock'){
+          a = 'YOU LOSE :('
+        }else a = 'YOU WIN!';
+    }
+    else if(playerPick === 'paper'){
+      if(housePick === 'scissors' || housePick === 'lizard'){
+        a = 'YOU LOSE :('
+      }else a = 'YOU WIN!';
+    }
+    else if(playerPick === 'scissors'){
+      if(housePick === 'spock' || housePick === 'rock'){
+        a = 'YOU LOSE :('
+      }else a = 'YOU WIN!';
+    }
+    else if(playerPick === 'spock'){
+      if(housePick === 'lizard' || housePick === 'paper'){
+        a = 'YOU LOSE :('
+      }else a = 'YOU WIN!';
+    }
+    else if(playerPick === 'lizard'){
+      if(housePick === 'rock' || housePick === 'scissors'){
+        a = 'YOU LOSE :('
+      }else a = 'YOU WIN!';
     }
     return a;
   },
