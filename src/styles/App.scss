@@ -8,17 +8,28 @@
     height: 100vh;
     @include flexbox(column, center, space-between);
     font-family: 'Barlow Semi Condensed', sans-serif;
-    .rulesButton{
-        position: fixed;
+    .buttons{
         border: 1px solid #e9e4e5;
         border-radius: 0.5rem;
         color: #e9e4e5;
         padding: 8px 32px;
-        bottom: 2rem;
-        right: 2rem;
         font-weight: 600;
         letter-spacing: 2px;
+        text-align: center;
+    }
+    .rulesButton{
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
         cursor: pointer;
+    }
+    .switchGame{
+        position: fixed;
+        bottom: 2rem;
+        left: 2rem;
+        img{
+            max-width: 100px;
+        }
     }
 }
 .App > *{
@@ -53,15 +64,20 @@
     }
 }
 
+@include sm-above-screen{
+    .rules-switchGame-mobile{
+        display: none;
+    }
+    .rulesButton{
+        right: 2rem;
+    }
+}
 @include sm-below-screen{
     .dummy{
         height: 20vh;
     }
-    .rulesButton{
-        left: 50%;
-        width: 30vw;
-        margin-left: -15vw;
-        text-align: center;
+    .rules-switchGame-desktop{
+        display: none;
     }
 }
 

@@ -7,6 +7,8 @@ import Rules from './components/rules';
 import SheldonComp from './components/sheldonComp';
 //styles
 import './styles/App.css';
+//assets
+import sheldonImg from './assets/images/sheldon.png';
 
 function App() {
   //states
@@ -109,12 +111,20 @@ function App() {
         }
       </div>
       <div className='dummy' onClick={()=> handleSheldon()}>
-        <button>SHELDON</button>
+        {/* <button>SHELDON</button> */}
       </div>
-      <div className='rulesButton' onClick={()=> setRulesModal(true)}>RULES</div>
+      <div className='switchGame'>
+        <img src={sheldonImg} className='sheldonImg'/>
+        <div className='buttons'>PLAY THIS</div>
+      </div>
+      <div className='rulesButton' onClick={()=> setRulesModal(true)}>
+        <div className='buttons'>RULES</div>
+      </div>
       <Rules closeModal={closeModal} rulesModal={rulesModal} sheldon={sheldon}/>
     </div>
   );
 }
 
 export default App;
+
+//https://www.pngwing.com/en/free-png-yumlm/download
