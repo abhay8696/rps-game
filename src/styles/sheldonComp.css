@@ -368,6 +368,10 @@
   background-repeat: no-repeat;
 }
 
+.hideSheldonComp {
+  display: none;
+}
+
 .sheldonComp, .disappearSheldonComp {
   position: absolute;
   width: 100%;

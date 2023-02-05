@@ -16,6 +16,7 @@ function App() {
   const [score, setScore] = useState(0);
   const [winnerMsg, setWinnerMsg] = useState('');
   const [sheldon, setSheldon] = useState(false);
+  const [clickedPlayAgain, setClickedPlayAgain] = useState(false);
   //lifecycle
   useEffect(()=> {
     let s = +window.localStorage.getItem('score');
@@ -78,18 +79,21 @@ function App() {
   handleReset = ()=> {
     setPick1(undefined);
     setPick2(undefined);
+    setClickedPlayAgain(true); //to avoid trigger of disappering animation
   },
   displayOriginal = ()=> {
-    if(!pick1) return <PlayComp sheldon={sheldon} handlePick={handlePick}/> 
+    if(!pick1) return <PlayComp sheldon={sheldon} handlePick={handlePick} clickedPlayAgain={clickedPlayAgain}/> 
     // return <PlayComp2 sheldon={sheldon} pick1={pick1} pick2={pick2} handleReset={handleReset} winnerMsg={winnerMsg}/>
   },
   displaySheldon = ()=> {
-    if(!pick1)  return <SheldonComp sheldon={sheldon} handlePick={handlePick}/> 
+    if(!pick1)  return <SheldonComp sheldon={sheldon} handlePick={handlePick} clickedPlayAgain={clickedPlayAgain}/> 
     // return <PlayComp2 sheldon={sheldon} pick1={pick1} pick2={pick2} handleReset={handleReset} winnerMsg={winnerMsg}/>
   },
   handleSheldon = ()=> {
     setSheldon(!sheldon);
-    handleReset();
+    setPick1(undefined);
+    setPick2(undefined);
+    setClickedPlayAgain(false);
   }
   
   return (

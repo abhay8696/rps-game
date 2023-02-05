@@ -10,6 +10,9 @@
     background-position: center;
     background-repeat: no-repeat;
 } 
+.hidePlayComp{
+    display: none;
+}
 .playComp, .disappearPlayComp{
     flex: 1;
     padding: 2rem;

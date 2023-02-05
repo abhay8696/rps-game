@@ -323,6 +323,16 @@
   box-shadow: 0px 8px 2px 0px #b62741;
 }
 
+.lizard {
+  background: radial-gradient(circle at top, #834fe3, #8c5de5);
+  box-shadow: 0px 8px 2px 0px #6e3bce;
+}
+
+.spock {
+  background: radial-gradient(circle at top, #40b9ce, #52bed1);
+  box-shadow: 0px 8px 2px 0px #23a1b8;
+}
+
 @media only screen and (min-width: 1200px) {
   .circle {
     width: 200px;
@@ -356,6 +366,10 @@
   background-image: url("../assets/images/bg-triangle.svg");
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.hidePlayComp {
+  display: none;
 }
 
 .playComp, .disappearPlayComp {

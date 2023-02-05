@@ -8,7 +8,7 @@ import paper from '../assets/images/icon-paper.svg';
 import scissors from '../assets/images/icon-scissors.svg';
 
 const PlayComp = (props) => {
-    const { handlePick, sheldon } = props;
+    const { handlePick, sheldon, clickedPlayAgain } = props;
     const class_name = useRef('playComp') ;
     const handButton = type=> {
         let hand;
@@ -24,7 +24,8 @@ const PlayComp = (props) => {
         )
     }
     if(sheldon){
-        class_name.current = 'disappearPlayComp'
+        if(clickedPlayAgain) class_name.current = 'hidePlayComp'; //to avoid trigger of disappering animaiton
+        else class_name.current = 'disappearPlayComp'
     }else class_name.current = 'playComp';
     return (
         <div className={`${class_name.current} bg-triangle`}>

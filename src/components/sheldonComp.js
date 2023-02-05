@@ -11,7 +11,7 @@ import lizard from '../assets/images/icon-lizard.svg';
 import spock from '../assets/images/icon-spock.svg';
 
 const SheldonComp = (props) => {
-    const { handlePick, sheldon } = props;
+    const { handlePick, sheldon, clickedPlayAgain } = props;
     const class_name = useRef('sheldonComp') ;
     const handButton = type=> {
         let hand;
@@ -29,7 +29,8 @@ const SheldonComp = (props) => {
         )
     }
     if(!sheldon){
-        class_name.current = 'disappearSheldonComp'
+        if(clickedPlayAgain) class_name.current = 'hideSheldonComp'; //to avoid trigger of disappering animaiton
+        else class_name.current = 'disappearSheldonComp'
     }else class_name.current = 'sheldonComp';
     return (
         <div className={`${class_name.current} bg-pentagon`}>
