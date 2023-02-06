@@ -121,6 +121,9 @@ function App() {
         {/* <button>SHELDON</button> */}
       </div>
       <div className='switchGame'>
+        <div className='questionMark'>
+          <span class="material-symbols-outlined"> help </span>
+        </div>
         <RandomImg />
         <div className='buttons' onClick={()=> handleSheldon()}>
          { !sheldon ? 'PLAY SHELDON WAY' : 'PLAY NORMAL WAY'}

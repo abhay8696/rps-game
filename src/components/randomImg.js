@@ -14,12 +14,12 @@ const RandomImg = () => {
     //lifecycle methods
     useEffect(()=> {
         console.log('image')
-        const a = 
+        // const a = 
         setInterval(() => {
           pickSheldonImg();
         }, 5000);
     
-        return clearInterval(a);
+        // return clearInterval(a);
     }, [])
     // functions
     const 

@@ -33,6 +33,18 @@
             max-width: 100px;
             @include buzzinga-anime();
         }
+        .questionMark{
+            color: white;
+            position: fixed;
+            right: 0;
+            .material-symbols-outlined {
+              font-variation-settings:
+              'FILL' 0,
+              'wght' 400,
+              'GRAD' 0,
+              'opsz' 48
+            }
+        }
     }
 }
 .App > *{
@@ -84,4 +96,3 @@
     }
 }
 
-   
