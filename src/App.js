@@ -1,14 +1,19 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 //components
 import Header from './components/header';
 import PlayComp from './components/playComp';
 import PlayComp2 from './components/playComp2';
 import Rules from './components/rules';
 import SheldonComp from './components/sheldonComp';
+import RandomImg from './components/randomImg';
 //styles
 import './styles/App.css';
 //assets
-import sheldonImg from './assets/images/sheldon.png';
+import sheldon1Img from './assets/images/sheldon.png';
+import sheldon2Img from './assets/images/sheldon2.png';
+import sheldon3Img from './assets/images/sheldon3.png';
+import sheldon4Img from './assets/images/sheldon4.png';
+import sheldon5Img from './assets/images/sheldon5.png';
 
 function App() {
   //states
@@ -19,6 +24,7 @@ function App() {
   const [winnerMsg, setWinnerMsg] = useState('');
   const [sheldon, setSheldon] = useState(false);
   const [clickedPlayAgain, setClickedPlayAgain] = useState(false);
+  const [sheldonImg, setSheldonImg] = useState(<img src={sheldon2Img} className='sheldonImg'/>);
   //lifecycle
   useEffect(()=> {
     let s = +window.localStorage.getItem('score');
@@ -98,6 +104,7 @@ function App() {
     setClickedPlayAgain(false);
   }
   
+  
   return (
     <div className="App">
       <Header score={score}/>
@@ -110,12 +117,14 @@ function App() {
           :null
         }
       </div>
-      <div className='dummy' onClick={()=> handleSheldon()}>
+      <div className='dummy'>
         {/* <button>SHELDON</button> */}
       </div>
       <div className='switchGame'>
-        <img src={sheldonImg} className='sheldonImg'/>
-        <div className='buttons'>PLAY THIS</div>
+        <RandomImg />
+        <div className='buttons' onClick={()=> handleSheldon()}>
+         { !sheldon ? 'PLAY SHELDON WAY' : 'PLAY NORMAL WAY'}
+        </div>
       </div>
       <div className='rulesButton' onClick={()=> setRulesModal(true)}>
         <div className='buttons'>RULES</div>

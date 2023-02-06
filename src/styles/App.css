@@ -1,3 +1,239 @@
+@-webkit-keyframes scaleUp {
+  0% {
+    transform: scale(90%);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(100%);
+    opacity: 1;
+  }
+}
+@keyframes scaleUp {
+  0% {
+    transform: scale(90%);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(100%);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes scaleZero {
+  0% {
+    transform: scale(100%);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0%);
+    opacity: 0;
+  }
+}
+@keyframes scaleZero {
+  0% {
+    transform: scale(100%);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0%);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes appearIn {
+  0% {
+    opacity: 0;
+    transform: scale(0%);
+  }
+  90% {
+    opacity: 1;
+    transform: scale(110%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
+@keyframes appearIn {
+  0% {
+    opacity: 0;
+    transform: scale(0%);
+  }
+  90% {
+    opacity: 1;
+    transform: scale(110%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
+@-webkit-keyframes slideLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%) scale(110%);
+  }
+}
+@keyframes slideLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%) scale(110%);
+  }
+}
+@-webkit-keyframes slideRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(50%) scale(110%);
+  }
+}
+@keyframes slideRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(50%) scale(110%);
+  }
+}
+@-webkit-keyframes slideDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(50%);
+  }
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(50%);
+  }
+}
+@-webkit-keyframes slideUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50px);
+  }
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50px);
+  }
+}
+@-webkit-keyframes appearFromCorner {
+  0% {
+    transform: scale(0%);
+    transform-origin: bottom right;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
+@keyframes appearFromCorner {
+  0% {
+    transform: scale(0%);
+    transform-origin: bottom right;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
+@-webkit-keyframes appearFromBottom {
+  0% {
+    transform: scale(0%);
+    transform-origin: bottom;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
+@keyframes appearFromBottom {
+  0% {
+    transform: scale(0%);
+    transform-origin: bottom;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
+@-webkit-keyframes appearDown {
+  2% {
+    transform: translateY(-150%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes appearDown {
+  2% {
+    transform: translateY(-150%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes riseUp {
+  from {
+    transform: translateY(150%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+@keyframes riseUp {
+  from {
+    transform: translateY(150%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+@-webkit-keyframes buzzinga {
+  from {
+    transform: scale(0%) translateY(100%);
+  }
+  to {
+    transform: scale(100%) translateY(0%);
+  }
+}
+@keyframes buzzinga {
+  from {
+    transform: scale(0%) translateY(100%);
+  }
+  to {
+    transform: scale(100%) translateY(0%);
+  }
+}
 .App {
   position: relative;
   text-align: center;
@@ -17,20 +253,25 @@
   font-weight: 600;
   letter-spacing: 2px;
   text-align: center;
+  cursor: pointer;
 }
 .App .rulesButton {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  cursor: pointer;
 }
 .App .switchGame {
   position: fixed;
   bottom: 2rem;
   left: 2rem;
+  transform: translateY(150%);
+  -webkit-animation: riseUp 1000ms ease-out 10000ms forwards;
+          animation: riseUp 1000ms ease-out 10000ms forwards;
 }
 .App .switchGame img {
   max-width: 100px;
+  -webkit-animation: buzzinga 500ms ease-out 0ms forwards;
+          animation: buzzinga 500ms ease-out 0ms forwards;
 }
 
 .App > * {
@@ -70,9 +311,6 @@
   }
 }
 @media only screen and (min-width: 480px) {
-  .rules-switchGame-mobile {
-    display: none;
-  }
   .rulesButton {
     right: 2rem;
   }
@@ -81,7 +319,8 @@
   .dummy {
     height: 20vh;
   }
-  .rules-switchGame-desktop {
-    display: none;
+  .switchGame .buttons {
+    font-size: 14px;
+    padding: 9px 12px;
   }
 }/*# sourceMappingURL=App.css.map */

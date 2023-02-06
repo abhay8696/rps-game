@@ -1,9 +1,10 @@
 @import 'flexbox';
 @import 'breakpoints';
+@import 'animations';
 
 .header{
     // animation: name duration timing-function delay iteration-count direction fill-mode;
-    animation: appearDown 1000ms ease-out 0s forwards;
+    @include appearDown-anime(normal);
     padding: 1rem;
     margin-top: 3rem;
     border: 3.8px solid hsl(217, 16%, 45%);
@@ -78,18 +79,4 @@
 }
 
 
-@keyframes appearDown {
-    0%{
-
-    }
-    1%{
-
-    }
-    2%{
-        transform: translateY(-150%);
-    }
-    100%{
-        transform: translateY(0);
-    }
-}
 

@@ -185,4 +185,52 @@
     opacity: 1;
     transform: scale(100%);
   }
+}
+@-webkit-keyframes appearDown {
+  2% {
+    transform: translateY(-150%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes appearDown {
+  2% {
+    transform: translateY(-150%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes riseUp {
+  from {
+    transform: translateY(150%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+@keyframes riseUp {
+  from {
+    transform: translateY(150%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+@-webkit-keyframes buzzinga {
+  from {
+    transform: scale(0%) translateY(100%);
+  }
+  to {
+    transform: scale(100%) translateY(0%);
+  }
+}
+@keyframes buzzinga {
+  from {
+    transform: scale(0%) translateY(100%);
+  }
+  to {
+    transform: scale(100%) translateY(0%);
+  }
 }/*# sourceMappingURL=animations.css.map */

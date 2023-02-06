@@ -1,5 +1,15 @@
 
 
+@mixin appearDown-anime($direction: 'normal'){
+    animation: appearDown 1000ms ease-out 0s forwards;
+    animation-direction: $direction;
+}
+@mixin riseUp-anime{
+    animation: riseUp 1000ms ease-out 10000ms forwards;
+}
+@mixin buzzinga-anime{
+    animation: buzzinga 500ms ease-out 0ms forwards;
+}
 @mixin scaleUp-anime($direction: 'normal'){
     // animation: name duration timing-function delay iteration-count direction fill-mode;
     animation: scaleUp 500ms ease-out 0s forwards;
@@ -151,5 +161,36 @@
     100%{
         opacity: 1;
         transform: scale(100%);
+    }
+}
+@keyframes appearDown {
+    0%{
+
+    }
+    1%{
+
+    }
+    2%{
+        transform: translateY(-150%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes riseUp {
+    from{
+        transform: translateY(150%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+
+@keyframes buzzinga {
+    from{
+        transform: scale(0%) translateY(100%);
+    }
+    to{
+        transform: scale(100%) translateY(0%);
     }
 }

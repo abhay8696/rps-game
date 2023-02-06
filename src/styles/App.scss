@@ -1,6 +1,6 @@
 @import 'flexbox';
 @import 'breakpoints';
-
+@import 'animations';
 .App {
     position: relative;
     text-align: center;
@@ -16,19 +16,22 @@
         font-weight: 600;
         letter-spacing: 2px;
         text-align: center;
+        cursor: pointer;
     }
     .rulesButton{
         position: fixed;
         bottom: 2rem;
         right: 2rem;
-        cursor: pointer;
     }
     .switchGame{
         position: fixed;
         bottom: 2rem;
         left: 2rem;
+        transform: translateY(150%);
+        @include riseUp-anime();  
         img{
             max-width: 100px;
+            @include buzzinga-anime();
         }
     }
 }
@@ -65,9 +68,6 @@
 }
 
 @include sm-above-screen{
-    .rules-switchGame-mobile{
-        display: none;
-    }
     .rulesButton{
         right: 2rem;
     }
@@ -76,8 +76,11 @@
     .dummy{
         height: 20vh;
     }
-    .rules-switchGame-desktop{
-        display: none;
+    .switchGame{
+        .buttons{
+            font-size: 14px;
+            padding: 9px 12px;
+        }
     }
 }
 
