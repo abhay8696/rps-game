@@ -6,6 +6,7 @@ import PlayComp2 from './components/playComp2';
 import Rules from './components/rules';
 import SheldonComp from './components/sheldonComp';
 import RandomImg from './components/randomImg';
+import VideoComp from './components/videoComp';
 //styles
 import './styles/App.css';
 //assets
@@ -25,6 +26,7 @@ function App() {
   const [sheldon, setSheldon] = useState(false);
   const [clickedPlayAgain, setClickedPlayAgain] = useState(false);
   const [sheldonImg, setSheldonImg] = useState(<img src={sheldon2Img} className='sheldonImg'/>);
+  const [videoModal, setVideoModal] = useState(false); 
   //lifecycle
   useEffect(()=> {
     let s = +window.localStorage.getItem('score');
@@ -33,6 +35,7 @@ function App() {
   //functions
   const
   closeModal = ()=>  setRulesModal(false),
+  closeVideoModal = ()=>  setVideoModal(false),
   handlePick = playerPick=> {
     let options, housePick;
     if(!sheldon){
@@ -121,7 +124,7 @@ function App() {
         {/* <button>SHELDON</button> */}
       </div>
       <div className='switchGame'>
-        <div className='questionMark'>
+        <div className='questionMark' onClick={()=> setVideoModal(true)}>
           <span class="material-symbols-outlined"> help </span>
         </div>
         <RandomImg />
@@ -133,6 +136,7 @@ function App() {
         <div className='buttons'>RULES</div>
       </div>
       <Rules closeModal={closeModal} rulesModal={rulesModal} sheldon={sheldon}/>
+      <VideoComp closeVideoModal={closeVideoModal} videoModal={videoModal}/>
     </div>
   );
 }
