@@ -265,8 +265,8 @@
   bottom: 2rem;
   left: 2rem;
   transform: translateY(150%);
-  -webkit-animation: riseUp 1000ms ease-out 10000ms forwards;
-          animation: riseUp 1000ms ease-out 10000ms forwards;
+  -webkit-animation: riseUp 1000ms ease-out 5000ms forwards;
+          animation: riseUp 1000ms ease-out 5000ms forwards;
 }
 .App .switchGame img {
   max-width: 100px;

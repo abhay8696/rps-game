@@ -5,7 +5,7 @@
     animation-direction: $direction;
 }
 @mixin riseUp-anime{
-    animation: riseUp 1000ms ease-out 10000ms forwards;
+    animation: riseUp 1000ms ease-out 5000ms forwards;
 }
 @mixin buzzinga-anime{
     animation: buzzinga 500ms ease-out 0ms forwards;
