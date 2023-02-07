@@ -234,7 +234,7 @@
     transform: scale(100%) translateY(0%);
   }
 }
-.rulesModal {
+.videoModal {
   background-color: rgba(0, 0, 0, 0.466);
   width: 100vw;
   height: 100vh;
@@ -245,59 +245,49 @@
   align-items: center;
   justify-content: center;
 }
-.rulesModal .modalDiv {
-  opacity: 0;
-  padding: 1rem 3rem 3rem 3rem;
-  margin: auto 0.5rem;
+.videoModal .videoModalDiv {
   box-sizing: border-box;
-  background-color: #fff;
   border-radius: 1rem;
+  width: 500px;
+  aspect-ratio: 16/9;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
-.rulesModal .modalDiv img {
-  margin-top: 1rem;
-}
-@media only screen and (max-width: 480px) {
-  .rulesModal .modalDiv img {
-    max-width: 70vw;
+@media only screen and (min-width: 480px) and (max-width: 720px) {
+  .videoModal .videoModalDiv {
+    width: 400px;
   }
 }
-.rulesModal .modalDiv .modalHeader {
-  width: 100%;
-  display: flex;
-  flex-direction: "";
-  align-items: center;
-  justify-content: space-between;
+@media only screen and (max-width: 480px) {
+  .videoModal .videoModalDiv {
+    width: 90vw;
+  }
 }
-.rulesModal .modalDiv .modalHeader span {
-  font-size: 2rem;
-  font-weight: 700;
-  color: hsl(229deg, 25%, 31%);
-  margin: 1rem 0;
-}
-.rulesModal .modalDiv .modalHeader img {
+.videoModal .videoModalDiv .closeVideo {
   cursor: pointer;
+  background-color: #fff;
+  color: #000;
+  margin-top: 1rem;
 }
 
-.modalOff {
+.videoModalOff {
   background-color: rgba(0, 0, 0, 0);
-  -webkit-animation: appearFromRightCorner 500ms ease-in-out 0ms forwards;
-          animation: appearFromRightCorner 500ms ease-in-out 0ms forwards;
+  -webkit-animation: appearFromLeftCorner 500ms ease-in-out 0ms forwards;
+          animation: appearFromLeftCorner 500ms ease-in-out 0ms forwards;
   animation-direction: reverse;
 }
-.modalOff .modalDiv {
+.videoModalOff .videoModalDiv {
   opacity: 1;
 }
 
-.modalOn {
+.videoModalOn {
   transform: scale(100%);
 }
-.modalOn .modalDiv {
-  -webkit-animation: appearFromRightCorner 500ms ease-in-out 0ms forwards;
-          animation: appearFromRightCorner 500ms ease-in-out 0ms forwards;
+.videoModalOn .videoModalDiv {
+  -webkit-animation: appearFromLeftCorner 500ms ease-in-out 0ms forwards;
+          animation: appearFromLeftCorner 500ms ease-in-out 0ms forwards;
   -webkit-animation-direction: normal;
           animation-direction: normal;
-}/*# sourceMappingURL=rulesModal.css.map */
+}/*# sourceMappingURL=videoModal.css.map */

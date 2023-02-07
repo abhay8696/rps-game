@@ -125,7 +125,9 @@ function App() {
       </div>
       <div className='switchGame'>
         <div className='questionMark' onClick={()=> setVideoModal(true)}>
-          <span class="material-symbols-outlined"> help </span>
+          {
+            !pick1 ? <span class="material-symbols-outlined"> help </span> : null
+          }
         </div>
         <RandomImg />
         <div className='buttons' onClick={()=> handleSheldon()}>

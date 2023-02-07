@@ -1,0 +1,44 @@
+@import 'flexbox';
+@import 'breakpoints';
+@import 'animations';
+
+.videoModal{
+    background-color: rgba(0, 0, 0, 0.466);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    transform: scale(0%);
+    @include flexbox('', center, center);
+    .videoModalDiv{
+        box-sizing: border-box;
+        border-radius: 1rem;
+        width: 500px;
+        aspect-ratio: 16/9;
+        @include sm-md-screen{
+            width: 400px;
+        }
+        @include sm-below-screen{
+            width: 90vw;
+        }
+        @include flexbox(column, center, space-between);
+        .closeVideo{
+            cursor: pointer;
+            background-color: #fff;
+            color: #000;
+            margin-top: 1rem;
+        }
+    }
+}
+.videoModalOff{
+    background-color: rgba(0, 0, 0, 0);
+    @include appearFromLeftCorner-anime(reverse); 
+    .videoModalDiv{
+        opacity: 1;  
+    }
+} 
+.videoModalOn{ 
+    transform: scale(100%);
+    .videoModalDiv{
+        @include appearFromLeftCorner-anime(); 
+    }
+}

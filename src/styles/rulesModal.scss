@@ -40,24 +40,15 @@
     }
 }
 .modalOff{
-    @include sm-above-screen{
-        @include appearFromCorner-animeOFF(); 
-    }
-    @include sm-below-screen{
-        @include appearFromBottom-animeOFF(); 
-    }
+    background-color: rgba(0, 0, 0, 0);
+    @include appearFromRightCorner-anime(reverse); 
     .modalDiv{
-        opacity: 1; 
+        opacity: 1;  
     }
 } 
-.modalOn{
+.modalOn{ 
     transform: scale(100%);
     .modalDiv{
-        @include sm-above-screen{
-            @include appearFromCorner-animeON(); 
-        }
-        @include sm-below-screen{
-            @include appearFromBottom-animeON(); 
-        }
+        @include appearFromRightCorner-anime(); 
     }
 }
