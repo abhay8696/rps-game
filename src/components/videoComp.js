@@ -25,7 +25,7 @@ const VideoComp = (props) => {
     showVideo = ()=> <iframe width="100%" height="100%" src={videoSrc.current} title="YouTube video player" frameborder="1" allow="accelerometer; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
 
     return (
-        <div onClick={()=> closeVideoModal()} className={`videoModal ${modalOnOff.current}`}>
+        <div className={`videoModal ${modalOnOff.current}`}>
             <div className='videoModalDiv' onClick={e=> e.stopPropagation()}>
                 {/* {videoModal ? showVideo() : null} */}
                 {showVideo()}
