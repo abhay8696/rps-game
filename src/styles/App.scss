@@ -53,7 +53,7 @@
 }
 .container{
     flex: 1;
-    @include flexbox('', center, center);
+    @include flexbox('', flex-start, center);
     & > *{
         box-sizing: border-box;
     }
