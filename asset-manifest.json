@@ -1,23 +1,32 @@
 {
   "files": {
-    "main.css": "/rps-game/static/css/main.1abe19bc.css",
-    "main.js": "/rps-game/static/js/main.58350301.js",
+    "main.css": "/rps-game/static/css/main.65ba49d0.css",
+    "main.js": "/rps-game/static/js/main.470f685a.js",
     "static/js/787.f0d309e9.chunk.js": "/rps-game/static/js/787.f0d309e9.chunk.js",
+    "static/media/sheldon.png": "/rps-game/static/media/sheldon.42f6695f0e0ba7cc1159.png",
+    "static/media/sheldon4.png": "/rps-game/static/media/sheldon4.f6b382d7df19e524ba3f.png",
+    "static/media/sheldon5.png": "/rps-game/static/media/sheldon5.7256e6989affc3494c86.png",
+    "static/media/sheldon3.png": "/rps-game/static/media/sheldon3.478fcc52329b4a2f765c.png",
+    "static/media/sheldon2.png": "/rps-game/static/media/sheldon2.cb7171b1126523991835.png",
     "static/media/logo-bonus.svg": "/rps-game/static/media/logo-bonus.9bf8aeb80c2526dee7c67aa5c1b74ccc.svg",
+    "static/media/image-rules-bonus.svg": "/rps-game/static/media/image-rules-bonus.513320fbf32ba9e4a81fba903a77b85f.svg",
     "static/media/logo.svg": "/rps-game/static/media/logo.a4a2b39fefcdb6a1a8088c4dba8f3d93.svg",
     "static/media/image-rules.svg": "/rps-game/static/media/image-rules.258b753fb6284dc8ae00c5b2fa7938c0.svg",
+    "static/media/icon-lizard.svg": "/rps-game/static/media/icon-lizard.0f83914cca1adc9454d1bdceb17610b0.svg",
     "static/media/icon-paper.svg": "/rps-game/static/media/icon-paper.8b57a6b108c1b8ae82931a39b10f96a2.svg",
     "index.html": "/rps-game/index.html",
+    "static/media/icon-spock.svg": "/rps-game/static/media/icon-spock.f4d7eee84cf50913d73967948d97d63a.svg",
     "static/media/icon-scissors.svg": "/rps-game/static/media/icon-scissors.3b1a5d7eb0b2f1fd3e955865ec04d9ed.svg",
     "static/media/icon-rock.svg": "/rps-game/static/media/icon-rock.476e90a9646a87bb3645d2f09f4f7fba.svg",
     "static/media/icon-close.svg": "/rps-game/static/media/icon-close.bde602ecd1a4e55e0c27137ed651e027.svg",
+    "static/media/bg-pentagon.svg": "/rps-game/static/media/bg-pentagon.1ad6d36532b75eb7d82c.svg",
     "static/media/bg-triangle.svg": "/rps-game/static/media/bg-triangle.77c6ca418d3751d8f71789234314a8b9.svg",
-    "main.1abe19bc.css.map": "/rps-game/static/css/main.1abe19bc.css.map",
-    "main.58350301.js.map": "/rps-game/static/js/main.58350301.js.map",
+    "main.65ba49d0.css.map": "/rps-game/static/css/main.65ba49d0.css.map",
+    "main.470f685a.js.map": "/rps-game/static/js/main.470f685a.js.map",
     "787.f0d309e9.chunk.js.map": "/rps-game/static/js/787.f0d309e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1abe19bc.css",
-    "static/js/main.58350301.js"
+    "static/css/main.65ba49d0.css",
+    "static/js/main.470f685a.js"
   ]
 }
