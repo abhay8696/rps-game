@@ -32,7 +32,6 @@
         .imgCaraousel{
             min-height: 100px;
             max-height: 150px;
-            background-color: #14153949;
             @include flexbox('', center, center);
             .sheldonImg{ 
                 position: absolute;
