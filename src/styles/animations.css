@@ -219,18 +219,26 @@
   }
 }
 @-webkit-keyframes buzzinga {
-  from {
-    transform: scale(0%) translateY(100%);
+  0% {
+    transform: scale(0%);
+    transform-origin: bottom left;
   }
-  to {
-    transform: scale(100%) translateY(0%);
+  50% {
+    transform: scale(100%);
+  }
+  100% {
+    transform: scale(0%);
   }
 }
 @keyframes buzzinga {
-  from {
-    transform: scale(0%) translateY(100%);
+  0% {
+    transform: scale(0%);
+    transform-origin: bottom left;
   }
-  to {
-    transform: scale(100%) translateY(0%);
+  50% {
+    transform: scale(100%);
+  }
+  100% {
+    transform: scale(0%);
   }
 }/*# sourceMappingURL=animations.css.map */

@@ -8,7 +8,7 @@
     animation: riseUp 1000ms ease-out 5000ms forwards;
 }
 @mixin buzzinga-anime{
-    animation: buzzinga 500ms ease-out 0ms forwards;
+    animation: buzzinga 1000ms ease-out 0ms forwards;
 }
 @mixin scaleUp-anime($direction: 'normal'){
     // animation: name duration timing-function delay iteration-count direction fill-mode;
@@ -181,10 +181,14 @@
 }
 
 @keyframes buzzinga {
-    from{
-        transform: scale(0%) translateY(100%);
+    0%{
+        transform: scale(0%);
+        transform-origin: bottom left; 
     }
-    to{
-        transform: scale(100%) translateY(0%);
+    50%{
+        transform: scale(100%);
+    }
+    100%{
+        transform: scale(0%) ;
     }
 }

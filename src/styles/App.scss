@@ -29,9 +29,34 @@
         left: 2rem;
         transform: translateY(150%);
         @include riseUp-anime();  
-        img{ 
-            max-width: 100px;
-            @include buzzinga-anime();
+        .imgCaraousel{
+            min-height: 100px;
+            max-height: 150px;
+            background-color: #14153949;
+            @include flexbox('', center, center);
+            .sheldonImg{ 
+                position: absolute;
+                max-width: 100px;
+                transform: scale(0);
+                animation: buzzinga2 25000ms ease-out 0ms forwards infinite;
+                
+            }  
+            #img1{
+                animation-delay: 0s;
+                margin-bottom: 20px;
+            }
+            #img2{
+                animation-delay: 5s;
+            }
+            #img3{
+                animation-delay: 10s;
+            }
+            #img4{
+                animation-delay: 15s;
+            }
+            #img5{
+                animation-delay: 20s;
+            }
         }
         .questionMark{
             color: white;
@@ -97,3 +122,26 @@
     }
 }
 
+
+@keyframes buzzinga2{
+    0%{
+        transform: scale(0%);
+    }
+    78%{
+        transform: scale(0%);
+        transform-origin: bottom left;
+    }
+    80%{
+        transform: scale(100%);
+    }
+    98%{
+        transform: scale(100%);
+    }
+    100%{
+        transform: scale(0%);
+        transform-origin: bottom right;
+    }
+}
+
+//  0   20s     24.5s   25s
+//  0   80%     98%     100%

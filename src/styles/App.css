@@ -1,13 +1,3 @@
-@-webkit-keyframes scaleUp {
-  0% {
-    transform: scale(90%);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(100%);
-    opacity: 1;
-  }
-}
 @keyframes scaleUp {
   0% {
     transform: scale(90%);
@@ -16,16 +6,6 @@
   100% {
     transform: scale(100%);
     opacity: 1;
-  }
-}
-@-webkit-keyframes scaleZero {
-  0% {
-    transform: scale(100%);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(0%);
-    opacity: 0;
   }
 }
 @keyframes scaleZero {
@@ -38,34 +18,12 @@
     opacity: 0;
   }
 }
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @keyframes fadeIn {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
-  }
-}
-@-webkit-keyframes appearIn {
-  0% {
-    opacity: 0;
-    transform: scale(0%);
-  }
-  90% {
-    opacity: 1;
-    transform: scale(110%);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(100%);
   }
 }
 @keyframes appearIn {
@@ -82,28 +40,12 @@
     transform: scale(100%);
   }
 }
-@-webkit-keyframes slideLeft {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%) scale(110%);
-  }
-}
 @keyframes slideLeft {
   from {
     transform: translateX(0);
   }
   to {
     transform: translateX(-50%) scale(110%);
-  }
-}
-@-webkit-keyframes slideRight {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(50%) scale(110%);
   }
 }
 @keyframes slideRight {
@@ -114,28 +56,12 @@
     transform: translateX(50%) scale(110%);
   }
 }
-@-webkit-keyframes slideDown {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(50%);
-  }
-}
 @keyframes slideDown {
   from {
     transform: translateY(0);
   }
   to {
     transform: translateY(50%);
-  }
-}
-@-webkit-keyframes slideUp {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-50px);
   }
 }
 @keyframes slideUp {
@@ -146,30 +72,10 @@
     transform: translateY(-50px);
   }
 }
-@-webkit-keyframes appearFromRightCorner {
-  0% {
-    transform: scale(0%);
-    transform-origin: bottom right;
-  }
-  100% {
-    opacity: 1;
-    transform: scale(100%);
-  }
-}
 @keyframes appearFromRightCorner {
   0% {
     transform: scale(0%);
     transform-origin: bottom right;
-  }
-  100% {
-    opacity: 1;
-    transform: scale(100%);
-  }
-}
-@-webkit-keyframes appearFromLeftCorner {
-  0% {
-    transform: scale(0%);
-    transform-origin: bottom left;
   }
   100% {
     opacity: 1;
@@ -186,28 +92,12 @@
     transform: scale(100%);
   }
 }
-@-webkit-keyframes appearDown {
-  2% {
-    transform: translateY(-150%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
 @keyframes appearDown {
   2% {
     transform: translateY(-150%);
   }
   100% {
     transform: translateY(0);
-  }
-}
-@-webkit-keyframes riseUp {
-  from {
-    transform: translateY(150%);
-  }
-  to {
-    transform: translateY(0%);
   }
 }
 @keyframes riseUp {
@@ -218,20 +108,16 @@
     transform: translateY(0%);
   }
 }
-@-webkit-keyframes buzzinga {
-  from {
-    transform: scale(0%) translateY(100%);
-  }
-  to {
-    transform: scale(100%) translateY(0%);
-  }
-}
 @keyframes buzzinga {
-  from {
-    transform: scale(0%) translateY(100%);
+  0% {
+    transform: scale(0%);
+    transform-origin: bottom left;
   }
-  to {
-    transform: scale(100%) translateY(0%);
+  50% {
+    transform: scale(100%);
+  }
+  100% {
+    transform: scale(0%);
   }
 }
 .App {
@@ -265,13 +151,38 @@
   bottom: 2rem;
   left: 2rem;
   transform: translateY(150%);
-  -webkit-animation: riseUp 1000ms ease-out 5000ms forwards;
-          animation: riseUp 1000ms ease-out 5000ms forwards;
+  animation: riseUp 1000ms ease-out 5000ms forwards;
 }
-.App .switchGame img {
+.App .switchGame .imgCaraousel {
+  min-height: 100px;
+  max-height: 150px;
+  background-color: rgba(20, 21, 57, 0.2862745098);
+  display: flex;
+  flex-direction: "";
+  align-items: center;
+  justify-content: center;
+}
+.App .switchGame .imgCaraousel .sheldonImg {
+  position: absolute;
   max-width: 100px;
-  -webkit-animation: buzzinga 500ms ease-out 0ms forwards;
-          animation: buzzinga 500ms ease-out 0ms forwards;
+  transform: scale(0);
+  animation: buzzinga2 25000ms ease-out 0ms forwards infinite;
+}
+.App .switchGame .imgCaraousel #img1 {
+  animation-delay: 0s;
+  margin-bottom: 20px;
+}
+.App .switchGame .imgCaraousel #img2 {
+  animation-delay: 5s;
+}
+.App .switchGame .imgCaraousel #img3 {
+  animation-delay: 10s;
+}
+.App .switchGame .imgCaraousel #img4 {
+  animation-delay: 15s;
+}
+.App .switchGame .imgCaraousel #img5 {
+  animation-delay: 20s;
 }
 .App .switchGame .questionMark {
   color: white;
@@ -331,5 +242,24 @@
   .switchGame .buttons {
     font-size: 14px;
     padding: 9px 12px;
+  }
+}
+@keyframes buzzinga2 {
+  0% {
+    transform: scale(0%);
+  }
+  78% {
+    transform: scale(0%);
+    transform-origin: bottom left;
+  }
+  80% {
+    transform: scale(100%);
+  }
+  98% {
+    transform: scale(100%);
+  }
+  100% {
+    transform: scale(0%);
+    transform-origin: bottom right;
   }
 }/*# sourceMappingURL=App.css.map */
