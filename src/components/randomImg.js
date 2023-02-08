@@ -32,11 +32,11 @@ const RandomImg = () => {
 
     return (
         <div className='imgCaraousel'>
-        {/* <img src={sheldon1Img} className='sheldonImg' id='img1'/> */}
-        {/* <img src={sheldon2Img} className='sheldonImg' id='img2'/> */}
+        <img src={sheldon1Img} className='sheldonImg' id='img1'/>
+        <img src={sheldon2Img} className='sheldonImg' id='img2'/>
         <img src={sheldon3Img} className='sheldonImg' id='img3'/>
-        {/* <img src={sheldon4Img} className='sheldonImg' id='img4'/> */}
-        {/* <img src={sheldon5Img} className='sheldonImg' id='img5'/> */}
+        <img src={sheldon4Img} className='sheldonImg' id='img4'/>
+        <img src={sheldon5Img} className='sheldonImg' id='img5'/>
         </div>
     );
 };
