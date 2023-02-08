@@ -1,6 +1,6 @@
 # Rock Paper Scissors Game (Frontend Mentor Challenge)
 
-![Design preview for the REST Countries API with color theme switcher coding challenge](./design/desktop-preview.jpg)
+![Design preview for the REST Countries API with color theme switcher coding challenge](./src/assets/images/Screenshot.png)
 
 ## [visit website here](https://abhay8696.github.io/rps-game/)
 
