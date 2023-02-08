@@ -15,7 +15,7 @@ const VideoComp = (props) => {
 
     if(videoModal){
         modalOnOff.current = 'videoModalOn';
-        videoSrc.current = "https://www.youtube.com/embed/iSHPVCBsnLw";
+        videoSrc.current = "https://www.youtube.com/embed/iSHPVCBsnLw?start=25";
     }else if(!videoModal && modalOnOff.current === 'videoModalOn'){
         modalOnOff.current = 'videoModalOff';
         videoSrc.current = "";

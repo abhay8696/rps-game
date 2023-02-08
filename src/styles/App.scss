@@ -27,8 +27,8 @@
         position: fixed;
         bottom: 2rem;
         left: 2rem;
-        transform: translateY(150%);
-        @include riseUp-anime();  
+        // transform: translateY(150%);
+        // @include riseUp-anime();  
         .imgCaraousel{
             min-height: 100px;
             max-height: 150px;
@@ -36,8 +36,8 @@
             .sheldonImg{ 
                 position: absolute;
                 max-width: 100px;
-                transform: scale(0);
-                animation: buzzinga2 25000ms ease-out 0ms forwards infinite;
+                // transform: scale(0);
+                // animation: buzzinga2 25000ms ease-out 0ms forwards infinite;
                 
             }  
             #img1{
@@ -60,7 +60,7 @@
         .questionMark{
             color: white;
             position: fixed;
-            right: 0;
+            left: 240px;
             cursor: pointer;
             .material-symbols-outlined {
               font-variation-settings:

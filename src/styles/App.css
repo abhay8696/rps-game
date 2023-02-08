@@ -150,8 +150,6 @@
   position: fixed;
   bottom: 2rem;
   left: 2rem;
-  transform: translateY(150%);
-  animation: riseUp 1000ms ease-out 5000ms forwards;
 }
 .App .switchGame .imgCaraousel {
   min-height: 100px;
@@ -164,8 +162,6 @@
 .App .switchGame .imgCaraousel .sheldonImg {
   position: absolute;
   max-width: 100px;
-  transform: scale(0);
-  animation: buzzinga2 25000ms ease-out 0ms forwards infinite;
 }
 .App .switchGame .imgCaraousel #img1 {
   animation-delay: 0s;
@@ -186,7 +182,7 @@
 .App .switchGame .questionMark {
   color: white;
   position: fixed;
-  right: 0;
+  left: 240px;
   cursor: pointer;
 }
 .App .switchGame .questionMark .material-symbols-outlined {
