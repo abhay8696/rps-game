@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/rps-game/static/css/main.d3fa88bb.css",
-    "main.js": "/rps-game/static/js/main.1f8ee889.js",
+    "main.css": "/rps-game/static/css/main.a24a94fb.css",
+    "main.js": "/rps-game/static/js/main.fa5cae53.js",
     "static/js/787.f0d309e9.chunk.js": "/rps-game/static/js/787.f0d309e9.chunk.js",
     "static/media/sheldon.png": "/rps-game/static/media/sheldon.42f6695f0e0ba7cc1159.png",
     "static/media/sheldon4.png": "/rps-game/static/media/sheldon4.f6b382d7df19e524ba3f.png",
@@ -21,12 +21,12 @@
     "static/media/icon-close.svg": "/rps-game/static/media/icon-close.bde602ecd1a4e55e0c27137ed651e027.svg",
     "static/media/bg-pentagon.svg": "/rps-game/static/media/bg-pentagon.1ad6d36532b75eb7d82c.svg",
     "static/media/bg-triangle.svg": "/rps-game/static/media/bg-triangle.77c6ca418d3751d8f71789234314a8b9.svg",
-    "main.d3fa88bb.css.map": "/rps-game/static/css/main.d3fa88bb.css.map",
-    "main.1f8ee889.js.map": "/rps-game/static/js/main.1f8ee889.js.map",
+    "main.a24a94fb.css.map": "/rps-game/static/css/main.a24a94fb.css.map",
+    "main.fa5cae53.js.map": "/rps-game/static/js/main.fa5cae53.js.map",
     "787.f0d309e9.chunk.js.map": "/rps-game/static/js/787.f0d309e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d3fa88bb.css",
-    "static/js/main.1f8ee889.js"
+    "static/css/main.a24a94fb.css",
+    "static/js/main.fa5cae53.js"
   ]
 }
